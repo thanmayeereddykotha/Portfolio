@@ -1,27 +1,11 @@
-/**
- * ╔══════════════════════════════════════════════════════════════╗
- * ║          SCRAPBOOK LAYOUT CONFIGURATION                      ║
- * ║  Edit this file to reposition every element on the page.     ║
- * ║                                                              ║
- * ║  All positions are in % of the page (0–100).                 ║
- * ║  top:  0 = top edge,  100 = bottom edge                      ║
- * ║  left: 0 = left edge, 100 = right edge                       ║
- * ║  rotate: degrees, e.g. -5, 12, 0                             ║
- * ║  size: font-size in rem (for text) / px (for emojis)         ║
- * ║                                                              ║
- * ║  TIP: Open the live editor by pressing [E] in the browser    ║
- * ║  to adjust with sliders, then paste the values back here.    ║
- * ╚══════════════════════════════════════════════════════════════╝
- */
-
 export const scrapbookConfig = {
   "p1": {
     "title": {
-      "label": "about Thanmayee",
-      "top": 8,
+      "label": "about Thanu",
+      "top": 11.5,
       "left": 50,
       "rotate": 0,
-      "size": 4.5
+      "size": 5.3
     },
     "texts": [
       {
@@ -62,7 +46,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "years",
-        "label": "24 years young",
+        "label": "21 years young",
         "top": 46,
         "left": 68,
         "rotate": -2,
@@ -81,7 +65,7 @@ export const scrapbookConfig = {
       {
         "id": "storyteller",
         "label": "Digital Storyteller",
-        "top": 77.5,
+        "top": 75.5,
         "left": 73.5,
         "rotate": 2,
         "size": 1.4,
@@ -139,7 +123,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "hearts",
-        "emoji": "❤️❤️",
+        "emoji": "❤️",
         "top": 60.5,
         "left": 14.5,
         "rotate": 4,
@@ -169,7 +153,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-loves",
-        "top": 51,
+        "top": 49,
         "left": 24.5,
         "width": 130,
         "height": 101,
@@ -193,7 +177,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-pinterest",
-        "top": 32.5,
+        "top": 31.5,
         "left": 56.5,
         "width": 189,
         "height": 60,
@@ -217,7 +201,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-aesthetic",
-        "top": 82,
+        "top": 77.5,
         "left": 66.5,
         "width": 167,
         "height": 73,
@@ -229,7 +213,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-storyteller",
-        "top": 59.5,
+        "top": 57,
         "left": 60.5,
         "width": 182,
         "height": 86,
@@ -241,10 +225,10 @@ export const scrapbookConfig = {
       }
     ],
     "profile": {
-      "borderColor": "#c92722",
+      "borderColor": "#dcacc1",
       "borderSize": 6,
       "gapSize": 4,
-      "top": 64.5,
+      "top": 66.5,
       "left": 46.5,
       "width": 690
     }
@@ -333,10 +317,10 @@ export const scrapbookConfig = {
       {
         "id": "ai",
         "label": "AI",
-        "top": 59,
+        "top": 66,
         "left": 29,
         "rotate": 6,
-        "size": 1.25,
+        "size": 1.1,
         "width": 170,
         "rating": 4,
         "textSize": 2.6,
@@ -738,4 +722,4 @@ export const scrapbookConfig = {
       }
     ]
   }
-}
+};

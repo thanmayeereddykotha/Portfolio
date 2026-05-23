@@ -1,0 +1,2087 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@700&family=Cinzel:wght@700&family=Italiana&family=Sacramento&display=swap");
+
+:root {
+  color: #201c18;
+  background: #fbf7ef;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --cream: #fbf7ef;
+  --warm-white: #fffaf3;
+  --linen: #ebe0d1;
+  --sand: #d8c7b2;
+  --ink: #201c18;
+  --muted: #766a5d;
+  --rose: #ad776f;
+  --olive: #8d9276;
+  --plum: #6f5367;
+  --shadow-soft: 0 28px 70px rgba(80, 61, 43, 0.15);
+  --shadow-photo: 0 26px 60px rgba(43, 35, 28, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.diary-scroll {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: var(--cream);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-snap-type: y mandatory; /* Native vertical scroll snapping */
+}
+
+.diary-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.diary-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: start; /* Snap page to top */
+  scroll-snap-stop: always; /* Prevent skipping multiple pages */
+  background:
+    linear-gradient(90deg, rgba(166, 178, 179, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(166, 178, 179, 0.18) 1px, transparent 1px),
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.9), transparent 30%),
+    var(--cream);
+  background-size: 60px 60px, 60px 60px, auto, auto;
+}
+
+.diary-page::after {
+  position: absolute;
+  inset: clamp(14px, 2vw, 28px);
+  /* border: 1px solid rgba(32, 28, 24, 0.08); */
+  pointer-events: none;
+  content: "";
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1440px);
+  height: 100%;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vh, 5rem) clamp(1.5rem, 4vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: clamp(0.72rem, 0.9vw, 0.9rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 720px;
+  font-size: clamp(2.5rem, min(8vw, 10vh), 10.5rem);
+  line-height: 0.86;
+}
+
+h2 {
+  max-width: 860px;
+  font-size: clamp(2rem, min(6vw, 8vh), 7.5rem);
+  line-height: 0.9;
+}
+
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--warm-white);
+  box-shadow: var(--shadow-photo);
+}
+
+.image-frame::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(32, 28, 24, 0.08);
+  pointer-events: none;
+  content: "";
+}
+
+.phone-glass span {
+  position: absolute;
+  color: rgba(255, 250, 243, 0.82);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 3.5rem);
+  line-height: 1;
+}
+
+.hero-page {
+  /* Inherits the beautiful uniform background from .diary-page */
+}
+
+.hero-page::after {
+  display: none;
+}
+
+/* The about-shell just fills the full page */
+.about-shell {
+  display: block;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+.about-board-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* The board covers the FULL wrapper section perfectly */
+.about-board {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.paper-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* TITLE — horizontally centered, sitting in top 18% */
+.about-title {
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+}
+
+.about-title h1 {
+  color: #b84339;
+  font-family: "Caveat", cursive;
+  font-size: clamp(2.6rem, 6vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.highlight-yellow {
+  background: #fcec5c;
+  display: inline-block;
+  padding: 0 0.4rem;
+  transform: rotate(-2deg);
+}
+
+.ribbon-icon {
+  width: clamp(32px, 4vw, 55px);
+  height: clamp(32px, 4vw, 55px);
+  flex-shrink: 0;
+}
+
+/* PHOTO CONTAINER — handles the absolute centering layout cleanly */
+.about-photo-container {
+  position: absolute;
+  left: 50%;
+  top: 55%; /* Slightly shifted down to balance nicely with the title */
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: clamp(340px, 46vw, 680px); /* BIGGER size as requested by the user */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible !important;
+  pointer-events: none;
+}
+
+/* PHOTO — inside the container, animates safely without transform conflicts */
+.about-photo {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.cutout-main {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: url(#solid-red-outline); /* Ultra-performant GPU filter outline */
+  will-change: transform, filter;
+  backface-visibility: hidden;
+}
+
+/* ── CONFIG-DRIVEN SCRAPBOOK ELEMENTS ──────────────────────── */
+/* Texts, emojis, and arrows are all individually positioned     */
+/* via inline styles generated from scrapbook.config.js          */
+
+/* TEXT LABELS */
+.scrap-text-item {
+  position: absolute;
+  z-index: 6;
+  font-family: "Caveat", cursive;
+  color: #b84339;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: clamp(110px, 18vw, 260px);
+  /* top, left, fontSize, transform:rotate set via inline style */
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* EMOJI / LOGO ELEMENTS */
+.scrap-emoji-item {
+  position: absolute;
+  z-index: 7;
+  line-height: 1;
+  /* top, left, fontSize, transform:rotate set via inline style */
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+/* ARROW SVGs */
+.scrap-arrow-item {
+  position: absolute;
+  z-index: 5;
+  overflow: visible;
+  /* top, left, width, height, transform:rotate set via inline style */
+  pointer-events: none;
+  will-change: transform;
+}
+
+
+.scroll-cue {
+  position: absolute;
+  right: clamp(2rem, 5vw, 5rem);
+  bottom: clamp(2rem, 4vw, 4rem);
+  display: grid;
+  gap: 0.8rem;
+  justify-items: center;
+  color: #b84339;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.scroll-cue i {
+  display: block;
+  width: 1px;
+  height: 54px;
+  background: linear-gradient(#b84339, transparent);
+}
+
+.section-heading {
+  display: grid;
+  gap: 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PAGE 2: MY CREATIVE TOOLKIT STYLES
+   ───────────────────────────────────────────────────────────── */
+
+.creative-toolkit-page {
+  /* Page shell styles naturally inherit from .diary-page */
+}
+
+/* Page Title header placement */
+.creative-toolkit-page .toolkit-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  top: 6.5vh;
+  z-index: 10;
+}
+
+.creative-toolkit-page .toolkit-title-text {
+  color: #b84339;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0;
+}
+
+/* Scrapbook layered torn paper canvas in the center */
+.toolkit-paper-deck {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(84vw, 1140px);
+  height: 66vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.torn-paper-sheet {
+  position: absolute;
+  inset: 0;
+  background: #fffdf9;
+  box-shadow: 0 15px 45px rgba(80, 61, 43, 0.08);
+  border: 1px solid rgba(32, 28, 24, 0.04);
+}
+
+.torn-paper-sheet.sheet-one {
+  transform: rotate(-0.8deg);
+  border-radius: 4px;
+  /* Clip-path polygon outlines to simulate torn rugged edges */
+  clip-path: polygon(
+    2% 2%, 98% 1.5%, 99% 98%, 1.5% 97.5%, 
+    1.8% 80%, 0.9% 60%, 2% 40%, 1.2% 20%
+  );
+}
+
+.torn-paper-sheet.sheet-two {
+  background: #fffcf6;
+  transform: rotate(1deg);
+  border-radius: 6px;
+  opacity: 0.9;
+  clip-path: polygon(
+    1.5% 1.5%, 98.8% 0.8%, 97.5% 99.2%, 2.2% 98.5%,
+    98.2% 20%, 99% 40%, 97.6% 60%, 98.6% 80%
+  );
+}
+
+/* Toast Container & Slices */
+.toasts-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Polaroid-Style Skill Cards */
+.skill-card-wrapper {
+  z-index: 3;
+  pointer-events: auto;
+  will-change: transform;
+}
+
+.premium-skill-card {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  background: #ffffff; /* Crisp white card */
+  border-radius: 16px; /* Beautiful rounded corners */
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.05), 
+    0 2px 8px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+/* Hover micro-animations */
+.premium-skill-card:hover {
+  transform: translateY(-5px) scale(1.03) rotate(-1deg);
+  box-shadow: 
+    0 18px 45px rgba(0, 0, 0, 0.08),
+    0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.skill-card-wrapper:nth-child(2n) .premium-skill-card:hover {
+  transform: translateY(-5px) scale(1.03) rotate(2deg);
+}
+
+/* Card Media block (Gradient placeholder) */
+.skill-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.25;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 16px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Small premium badge on top-left */
+.skill-card-arrow-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+  font-weight: 800;
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.premium-skill-card:hover .skill-card-arrow-badge {
+  transform: rotate(45deg);
+}
+
+/* Skillset Name text style */
+.skill-card-name {
+  color: #1a365d; /* Premium Navy color for high contrast and readability */
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
+  user-select: none;
+  word-wrap: break-word;
+}
+
+/* Card Details (Stars) styling */
+.skill-card-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.skill-stars-container {
+  display: flex;
+  gap: 6px;
+}
+
+.skill-star-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.premium-skill-card:hover .skill-star-icon {
+  transform: scale(1.1);
+}
+
+.star-filled {
+  color: #ffc107; /* Premium gold star */
+  text-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+}
+
+.star-empty {
+  color: #e2e8f0; /* Soft slate empty star */
+}
+
+/* Floating Tool Bubbles */
+.floating-tools-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.tool-bubble-wrapper {
+  z-index: 4;
+  will-change: transform;
+}
+
+.tool-bubble {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22%;
+  color: #fff;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12), inset 0 2px 8px rgba(255,255,255,0.15);
+}
+
+@keyframes gentle-float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Alternate animation delay for natural organic floating feel */
+.tool-bubble-wrapper:nth-child(2n) .tool-bubble {
+  animation-duration: 5s;
+  animation-delay: -1s;
+}
+
+.tool-bubble-wrapper:nth-child(3n) .tool-bubble {
+  animation-duration: 7s;
+  animation-delay: -2s;
+}
+
+/* Hover zoom */
+.tool-bubble:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3) !important;
+}
+
+.collab-layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.72fr) minmax(280px, 1fr);
+  gap: clamp(1.5rem, 4vw, 5.5rem);
+  align-items: center;
+}
+
+.collab-heading {
+  align-content: center;
+}
+
+.collab-heading p {
+  max-width: 520px;
+  color: #51483f;
+  font-size: clamp(0.9rem, 1.25vw, 1.18rem);
+  line-height: 1.6;
+}
+
+.content-carousel {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.4rem, 1vw, 1.2rem);
+  align-items: end;
+}
+
+.content-card {
+  display: grid;
+  gap: clamp(0.5rem, 1.5vh, 1rem);
+}
+
+.phone-glass {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.56;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent 36%),
+    linear-gradient(145deg, var(--start), var(--end));
+  box-shadow: var(--shadow-photo);
+}
+
+.phone-glass::before {
+  position: absolute;
+  top: 0.7rem;
+  left: 50%;
+  width: 38%;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.58);
+  content: "";
+  translate: -50% 0;
+}
+
+.phone-glass::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(32, 28, 24, 0.1);
+  content: "";
+}
+
+.phone-glass span {
+  right: 1rem;
+  bottom: 1rem;
+  font-size: clamp(1.15rem, 2vw, 2.1rem);
+}
+
+.content-card p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.content-one {
+  --start: #e7cfc5;
+  --end: #956064;
+  margin-bottom: 9vh;
+}
+
+.content-two {
+  --start: #ded4c4;
+  --end: #6b6158;
+  margin-bottom: 1vh;
+}
+
+.content-three {
+  --start: #d5d9ca;
+  --end: #7e876c;
+  margin-bottom: 12vh;
+}
+
+.content-four {
+  --start: #ead7b8;
+  --end: #a1724c;
+  margin-bottom: 4vh;
+}
+
+.content-five {
+  --start: #d6c4cf;
+  --end: #6f5367;
+  margin-bottom: 8vh;
+}
+
+.contact-shell {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.contact-card {
+  display: grid;
+  width: min(860px, 92vw);
+  gap: clamp(0.8rem, 2vh, 1.4rem);
+  padding: clamp(1.5rem, 4vh, 5rem) clamp(1rem, 4vw, 5rem);
+  border: 1px solid rgba(32, 28, 24, 0.1);
+  background: rgba(255, 250, 243, 0.72);
+  box-shadow: var(--shadow-soft);
+  font-style: normal;
+  justify-items: center;
+  text-align: center;
+}
+
+.contact-card h2 {
+  color: var(--plum);
+  font-style: italic;
+}
+
+.booking-line {
+  color: var(--ink);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-card a {
+  color: var(--ink);
+  font-size: clamp(1.05rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-card a:hover {
+  color: var(--rose);
+}
+
+.contact-handle {
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 700;
+}
+
+@media (max-width: 1060px) {
+  .collab-layout {
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vh, 2rem);
+    align-content: center;
+  }
+
+  .about-board {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .about-photo-container {
+    width: clamp(260px, 48vw, 440px);
+    top: 54%;
+  }
+
+  .pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pillar-card {
+    min-height: 31vh;
+  }
+
+  .pillar-image {
+    min-height: 22vh;
+  }
+
+  .content-carousel {
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    overflow: visible;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding: clamp(1.4rem, 6vw, 2.4rem);
+  }
+
+  .diary-page::after {
+    inset: 12px;
+  }
+
+  h1 {
+    font-size: clamp(3.6rem, 18vw, 5.8rem);
+  }
+
+  h2 {
+    font-size: clamp(2.55rem, 13vw, 4.8rem);
+  }
+
+  .about-shell {
+    padding: 1.25rem;
+  }
+
+  .about-board {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    transform: none;
+  }
+
+  .about-title h1 {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+
+  .ribbon-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .about-photo-container {
+    width: clamp(220px, 62vw, 340px);
+    top: 52%;
+  }
+
+  .scrapbook-item {
+    font-size: 1rem;
+  }
+
+  .scrap-text {
+    max-width: 100px;
+  }
+
+  .scrap-icon {
+    font-size: 1.3rem;
+  }
+
+  .item-procaffeinator { top: 22%; left: 3vw; }
+  .item-loves          { top: 40%; left: 1vw; }
+  .item-concept        { top: 60%; left: 4vw; }
+  .item-clapper        { top: 76%; left: 14vw; }
+  .item-pinterest      { top: 18%; right: 2vw; }
+  .item-years          { top: 42%; right: 2vw; }
+  .item-aesthetic      { top: 60%; right: 2vw; }
+
+  .scroll-cue {
+    right: 1.4rem;
+    bottom: 1.4rem;
+  }
+
+  .pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+  }
+
+  .pillar-card {
+    min-height: 0;
+  }
+
+  .pillar-image {
+    min-height: 19vh;
+  }
+
+  .pillar-meta {
+    padding: 0.9rem;
+  }
+
+  .pillar-meta p {
+    display: none;
+  }
+
+  .collab-layout {
+    align-content: center;
+    padding-top: 2vh;
+  }
+
+  .collab-heading p {
+    display: none;
+  }
+
+  .content-carousel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .content-card:nth-child(n + 4) {
+    display: none;
+  }
+
+  .content-card {
+    margin-bottom: 0;
+  }
+
+  .content-card p {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .contact-card {
+    width: 92vw;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PAGE 3: HOW I WORK WITH BRANDS STYLES
+   ───────────────────────────────────────────────────────────── */
+
+.how-i-work-page {
+}
+
+.how-i-work-page::after {
+  display: none;
+}
+
+/* ── CAMPAIGN SHOWCASE CARDS ── */
+.campaign-card {
+  position: absolute;
+  z-index: 3;
+  transition: scale 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+  pointer-events: auto;
+  backface-visibility: hidden;
+  border-radius: 1em;
+}
+
+.campaign-card:hover {
+  scale: 1.025;
+}
+
+/* ── 3-PAGE OPEN BOOKLET (MINUTIAE) ── */
+.booklet-3page-card {
+  /* Position, width, rotate and y handled via config / Framer Motion */
+}
+
+.booklet-3page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background: #c92722; /* Rich Crimson Red */
+  border-radius: 1em;
+  border: 0.0625em solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1.25em 3.125em rgba(32, 10, 10, 0.22);
+  overflow: hidden;
+}
+
+.booklet-page {
+  flex: 1 1 33.333%;
+  position: relative;
+  padding: 1.5em 1.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 18.125em;
+}
+
+/* Booklet Page Divider Creases */
+.booklet-page:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1em;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.22), transparent);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Page 1: Cover Page */
+.cover-page {
+  padding-left: 3em; /* space for the binding strip */
+  background: #c92722;
+}
+
+.cover-page::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2em;
+  background: #faf2e4; /* beautiful warm cream strip */
+  border-right: 0.125em dashed rgba(199, 39, 34, 0.25);
+  box-shadow: inset -0.3125em 0 0.625em rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.binder-rings {
+  position: absolute;
+  left: 0.625em;
+  top: 0;
+  bottom: 0;
+  width: 0.75em;
+  background-image: radial-gradient(circle, #3a0d0b 0.3125em, transparent 0.375em);
+  background-size: 100% 2em;
+  background-position: center;
+  background-repeat: repeat-y;
+  z-index: 3;
+}
+
+/* Highly premium metallic spiral coil binder rings effect */
+.binder-rings::after {
+  content: "";
+  position: absolute;
+  left: -0.375em;
+  top: 0;
+  bottom: 0;
+  width: 1.5em;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0.5em,
+    #b5b5b5 0.625em,
+    #e8e8e8 0.8125em,
+    #8a8a8a 1em,
+    transparent 1.125em
+  );
+  background-size: 100% 2em;
+  z-index: 4;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.cover-title {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  gap: 0.375em;
+}
+
+.cover-title h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8em, 2.8vw, 2.3em);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  color: #faf2e4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.cover-title .val-sub {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(0.95em, 1.4vw, 1.1em);
+  font-style: italic;
+  font-weight: 500;
+  color: #ffdd80; /* Elegant gold accent */
+  margin: 0;
+}
+
+.cover-title .cursive-sub {
+  font-family: "Caveat", cursive;
+  font-size: 1.5em;
+  color: #c92722;
+  background: #fcec5c; /* Yellow highlighter badge */
+  padding: 0.1875em 0.75em;
+  border-radius: 0.375em;
+  align-self: flex-start;
+  transform: rotate(-3deg);
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.15);
+  margin-top: 0.375em;
+  font-weight: 700;
+}
+
+/* Page 2: Lined Notebook Page */
+.lined-paper-page {
+  background-color: #fffbf2; /* Warm notebook paper cream */
+  color: #3a2c1d;
+  padding-left: 1.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lined-paper-page::before {
+  content: "";
+  position: absolute;
+  left: 1.25em;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(199, 39, 34, 0.35); /* Red vertical margin line */
+  z-index: 2;
+}
+
+.notebook-lines {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(199, 39, 34, 0.08) 1px, transparent 1px);
+  background-size: 100% 1.5em;
+  background-position: 0 0.875em;
+  pointer-events: none;
+}
+
+.booklet-text {
+  font-family: "Caveat", cursive;
+  font-size: 1.25em;
+  line-height: 1.5em; /* Matches background-size for perfect line alignment */
+  font-weight: 600;
+  color: #3d3125;
+  z-index: 3;
+  margin: 0;
+}
+
+/* Page 3: Media Page */
+.media-page {
+  background: #c92722;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+}
+
+.phone-mockups {
+  width: 5.375em;
+  height: 9.625em;
+  border: 0.3125em solid #1a1613; /* Dark outer phone bezel */
+  border-radius: 0.75em;
+  overflow: hidden;
+  box-shadow: 0 0.625em 1.5em rgba(0, 0, 0, 0.35);
+  background: #000;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Sleek speaker notch */
+.phone-mockups::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.25em;
+  height: 0.3125em;
+  background: #1a1613;
+  border-bottom-left-radius: 0.1875em;
+  border-bottom-right-radius: 0.1875em;
+  z-index: 10;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.products-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3125em;
+}
+
+.products-label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65em;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.product-thumb {
+  width: 4em;
+  height: 4em;
+  border-radius: 0.5em;
+  border: 0.125em solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0.5em 1.125em rgba(0, 0, 0, 0.25);
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── 2-PAGE LANDSCAPE CONTEXT CARD ── */
+.context-card-2page-card {
+  /* Position, width, rotate and y handled via config / Framer Motion */
+}
+
+.context-card-2page {
+  position: relative;
+  background: #c92722;
+  color: white;
+  border-radius: 1em;
+  padding: 2em 1.25em 1.25em 1.25em;
+  border: 0.0625em solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1.25em 3.125em rgba(32, 10, 10, 0.22);
+  display: flex;
+  flex-direction: column;
+  min-height: 13.75em;
+  overflow: visible;
+}
+
+.tape-accent {
+  position: absolute;
+  top: -0.75em;
+  left: 1.25em;
+  background: rgba(252, 236, 92, 0.95);
+  color: #a61c18;
+  font-family: "Caveat", cursive;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 0.25em 1.125em;
+  transform: rotate(-2.5deg);
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+  border-left: 0.125em dashed rgba(166, 28, 24, 0.15);
+  border-right: 0.125em dashed rgba(166, 28, 24, 0.15);
+  z-index: 10;
+  letter-spacing: 0.05em;
+}
+
+.context-main {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25em;
+  align-items: center;
+  margin-top: 0.5em;
+  width: 100%;
+}
+
+.context-text-section {
+  flex: 1;
+}
+
+.context-text {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95em;
+  line-height: 1.55;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.context-media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3125em;
+  flex-shrink: 0;
+}
+
+.product-thumbs-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375em;
+}
+
+.product-thumb-small {
+  width: 3.375em;
+  height: 3.375em;
+  border-radius: 0.375em;
+  border: 0.125em solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0.375em 0.875em rgba(0, 0, 0, 0.20);
+}
+
+/* Serrated edge details at bottom */
+.serrated-edge {
+  height: 0.625em;
+  background-image: radial-gradient(circle, transparent, transparent 50%, #c92722 50%, #c92722);
+  background-size: 0.75em 0.75em;
+  background-position: top;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+  bottom: -0.3125em;
+  left: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+/* ── ISHKAARA & LANEIGE Ivory Cards ── */
+.ishkaara-card {
+  background: #fffdfb;
+  border: 1px solid rgba(199, 39, 34, 0.16);
+  color: #332b24;
+  border-radius: 0.875em;
+  box-shadow: 0 0.9375em 2.1875em rgba(43, 35, 28, 0.08);
+}
+
+.ishkaara-card .card-main-content {
+  padding: 1.375em;
+  display: block;
+  background-image: linear-gradient(rgba(199, 39, 34, 0.05) 1px, transparent 1px);
+  background-size: 100% 1.375em;
+  background-position: 0 0.375em;
+}
+
+.ishkaara-card .script-lines-simplified {
+  font-family: "Caveat", cursive;
+  font-size: 1.3em;
+  line-height: 1.375em;
+  color: #4c4238;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Page 3 title styling */
+.how-i-work-page .p3-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  top: 6vh;
+}
+
+.how-i-work-page .p3-title-text {
+  color: #c92722;
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2.6rem, 5.8vw, 6.8rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.how-i-work-page .p3-subtitle-text {
+  color: #c92722;
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.4rem, 2.4vw, 2.4rem);
+  font-weight: 700;
+  background: #fcec5c;
+  display: inline-block;
+  padding: 2px 14px;
+  transform: rotate(-1.5deg);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(199, 39, 34, 0.08);
+}
+
+/* ── RESPONSIVE STACKS FOR PHONE DEVICES ── */
+
+@media (max-width: 1060px) {
+  /* Positions and scaling for tablets */
+  .booklet-3page-card.note-minutiae {
+    width: 42.5em !important;
+  }
+  .context-card-2page-card.note-kay-beauty {
+    width: 30em !important;
+  }
+  .context-card-2page-card.note-mejuri {
+    width: 30em !important;
+  }
+  .ishkaara-card.note-ishkaara {
+    width: 20em !important;
+  }
+  .ishkaara-card.note-laneige {
+    width: 18.75em !important;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Creative Toolkit responsive mobile styles */
+  .creative-toolkit-page .about-board-wrapper {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 16px 50px !important;
+    box-sizing: border-box;
+  }
+
+  .creative-toolkit-page .about-board {
+    position: relative !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .creative-toolkit-page .toolkit-title {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-bottom: 0;
+  }
+
+  .creative-toolkit-page .toolkit-title-text {
+    font-size: clamp(2rem, 9vw, 3.4rem) !important;
+    text-align: center;
+  }
+
+  /* Hide large background paper deck on mobile to stack naturally */
+  .creative-toolkit-page .toolkit-paper-deck {
+    display: none;
+  }
+
+  /* Torn Paper Skills stack on mobile */
+  .creative-toolkit-page .toasts-container {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .creative-toolkit-page .torn-paper-skill-wrapper {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 250px !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+  }
+
+  .creative-toolkit-page .torn-paper-skill:hover {
+    transform: scale(1.03) !important;
+  }
+
+  /* Tool bubbles display inline-flex at bottom on mobile */
+  .creative-toolkit-page .floating-tools-container {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 15px;
+    padding: 10px 0;
+  }
+
+  .creative-toolkit-page .tool-bubble-wrapper {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .creative-toolkit-page .tool-bubble {
+    animation: gentle-float 5s ease-in-out infinite alternate !important;
+  }
+
+  .how-i-work-page .about-board-wrapper {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 16px 60px !important;
+  }
+
+  .how-i-work-page .about-board {
+    position: relative !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .how-i-work-page .p3-title {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-bottom: 12px;
+  }
+
+  .how-i-work-page .p3-title-text {
+    font-size: clamp(2rem, 9vw, 3.4rem);
+    text-align: center;
+  }
+
+  .how-i-work-page .p3-subtitle-text {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+  }
+
+  /* Cards responsive stack */
+  .booklet-3page-card, .context-card-2page-card, .ishkaara-card {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 8px auto !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    box-shadow: 0 12px 35px rgba(15, 33, 41, 0.12) !important;
+  }
+
+  .booklet-3page-card:hover, .context-card-2page-card:hover, .ishkaara-card:hover {
+    scale: 1 !important;
+  }
+
+  /* Stack the 3-page booklet vertically on mobile */
+  .booklet-3page {
+    flex-direction: column;
+  }
+
+  .booklet-page {
+    flex: 1 1 auto;
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .booklet-page:not(:last-child)::after {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    height: 12px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), transparent);
+  }
+
+  .cover-page {
+    padding-left: 40px;
+  }
+
+  .cover-page::before {
+    width: 24px;
+  }
+
+  .binder-rings {
+    left: 6px;
+    width: 10px;
+  }
+
+  .binder-rings::after {
+    left: -4px;
+    width: 18px;
+  }
+
+  /* Stack the 2-page cards vertically on mobile */
+  .context-main {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .context-media-section {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product-thumbs-column {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .serrated-edge {
+    display: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PAGE 4: MY WORK STYLES
+   ───────────────────────────────────────────────────────────── */
+
+.my-work-page {
+  /* Soft grid cream background pattern */
+  background-color: #f7f3eb;
+}
+
+.my-work-title {
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.my-work-title h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #3a2c1d;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.movie-emoji {
+  display: inline-block;
+  font-size: 3.5rem;
+  transform: rotate(-10deg);
+  filter: drop-shadow(0 4px 8px rgba(80, 61, 43, 0.2));
+  animation: movie-pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes movie-pulse {
+  0% { transform: rotate(-10deg) scale(0.97); }
+  100% { transform: rotate(-5deg) scale(1.03); }
+}
+
+.yellow-highlight-stroke {
+  transform: translateX(-50%) rotate(-0.5deg);
+  opacity: 0.85;
+  box-shadow: 0 0 10px rgba(254, 240, 138, 0.5);
+  pointer-events: none;
+}
+
+.my-work-arrow-wrapper {
+  pointer-events: none;
+}
+
+.my-work-arrow-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 2px 4px rgba(199, 39, 34, 0.15));
+}
+
+/* Clipboard Video Container & Cards */
+.work-videos-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.work-video-card-wrapper {
+  z-index: 3;
+  pointer-events: auto;
+  will-change: transform;
+}
+
+.clipboard-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff; /* Crisp white board */
+  border: 1px solid rgba(80, 61, 43, 0.12);
+  border-radius: 12px;
+  box-shadow: 
+    0 12px 36px rgba(80, 61, 43, 0.08), 
+    0 2px 8px rgba(80, 61, 43, 0.04);
+  padding: 32px 10px 36px 10px; /* Space at top for the clip, at bottom for the tag */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  background-image: 
+    linear-gradient(rgba(80, 61, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 61, 43, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px; /* Subtle graph grid pattern */
+}
+
+/* Clipboard Clip Hanger styling */
+.clipboard-clip {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.clip-hanger-loop {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #c92722;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background: transparent;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.clip-clamp {
+  width: 60px;
+  height: 16px;
+  background: linear-gradient(180deg, #e8302b, #c92722);
+  border-radius: 4px;
+  border: 1px solid #a31d1a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.clip-clamp::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #7a100d;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clipboard-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Sleek Video Placeholder */
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: #12100e;
+  border-radius: 8px;
+  border: 1px solid rgba(80, 61, 43, 0.15);
+  overflow: hidden;
+  box-shadow: inset 0 8px 24px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 8px 8px, 4px 4px;
+  opacity: 0.45;
+}
+
+/* Play Button Overlay */
+.play-button-overlay {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background 0.3s ease;
+}
+
+.play-button-overlay svg {
+  width: 18px;
+  height: 18px;
+  transform: translateX(1px); /* Perfect visual centering */
+}
+
+/* Brand Paint stroke at bottom */
+.brand-tag-paint {
+  position: absolute;
+  bottom: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+.brushstroke-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 3px 6px rgba(199, 39, 34, 0.3));
+}
+
+.brand-tag-text {
+  position: relative;
+  z-index: 5;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  /* Tilt text slightly to match organic brush feel */
+  transform: rotate(-1deg);
+}
+
+/* Card hover animation overrides */
+.work-video-card-wrapper:hover .clipboard-card {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 
+    0 24px 60px rgba(80, 61, 43, 0.16), 
+    0 4px 16px rgba(80, 61, 43, 0.06);
+  border-color: rgba(199, 39, 34, 0.3);
+}
+
+.work-video-card-wrapper:hover .play-button-overlay {
+  transform: scale(1.15);
+  background: rgba(199, 39, 34, 0.85);
+  border-color: #c92722;
+  box-shadow: 0 0 15px rgba(199, 39, 34, 0.4);
+}
+
+.work-video-card-wrapper:hover .brand-tag-text {
+  animation: shake-tag 0.5s ease-in-out;
+}
+
+@keyframes shake-tag {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg) scale(1.05); }
+}
+
+.work-video-card-wrapper:hover .brand-tag-text {
+  animation: shake-tag 0.5s ease-in-out;
+}
+
+@keyframes shake-tag {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg) scale(1.05); }
+}
+
+/* Make sure the clipboard cards adapt beautifully to mobile devices */
+@media (max-width: 1060px) {
+  .work-videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    padding: 120px 20px 40px;
+    gap: 32px;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .work-video-card-wrapper {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    y: 0 !important;
+    margin-bottom: 24px;
+    flex: 0 0 240px;
+  }
+
+  .my-work-arrow-wrapper {
+    display: none; /* Hide floating arrows on compact tablet viewports */
+  }
+
+  .my-work-title {
+    position: relative !important;
+    top: 40px !important;
+    left: auto !important;
+    transform: none !important;
+    margin-bottom: 40px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PAGE 5: CONTACT & BOOKING SCRAPBOOK STYLES
+   ───────────────────────────────────────────────────────────── */
+
+.contact-page {
+  /* Inherits uniform diary background */
+}
+
+/* binder notebook sheet */
+.contact-notebook-card {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: clamp(340px, 35vw, 540px);
+  background: #fffdf9;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(80, 61, 43, 0.18), 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid rgba(32, 28, 24, 0.08);
+  padding: 40px 28px 28px;
+  z-index: 10;
+  transform: rotate(-1deg);
+  overflow: visible;
+}
+
+/* realistic metal spiral binding loops */
+.binder-rings-header {
+  position: absolute;
+  top: -16px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.binder-ring-hole {
+  width: 14px;
+  height: 14px;
+  background: #ebe3d5;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.binder-metal-ring {
+  position: absolute;
+  top: -8px;
+  left: 3px;
+  width: 8px;
+  height: 24px;
+  background: linear-gradient(90deg, #ccc, #fff 50%, #999);
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.notebook-card-body {
+  position: relative;
+  min-height: 280px;
+}
+
+/* blue lined sheet with red margins */
+.notebook-red-margin {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  width: 2px;
+  background: #ff8585;
+  opacity: 0.6;
+}
+
+.notebook-lines-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(166, 193, 219, 0.25) 1px, transparent 1px);
+  background-size: 100% 32px;
+  margin-top: 48px;
+  pointer-events: none;
+}
+
+.notebook-card-title {
+  color: #c92722;
+  font-family: "Caveat", cursive;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 28px;
+  margin-left: 48px;
+  letter-spacing: 0.05em;
+  transform: rotate(-1.5deg);
+}
+
+.notebook-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 32px; /* aligns exactly with blue lines */
+}
+
+/* high aesthetic red handwritten checkmarks */
+.check-box-icon {
+  font-family: "Caveat", cursive;
+  color: #c92722;
+  font-size: 2.2rem;
+  font-weight: 800;
+  transform: translateY(-8px) rotate(-8deg);
+  user-select: none;
+}
+
+.checklist-label {
+  font-family: "Caveat", cursive;
+  color: #3b3026;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+/* contact stickers */
+.floating-contact-sticker {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(32, 28, 24, 0.08);
+  padding: 24px 32px;
+  text-align: center;
+  z-index: 12;
+}
+
+.floating-contact-sticker::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 30%;
+  right: 30%;
+  height: 20px;
+  background: rgba(254, 240, 138, 0.6); /* Washi tape sticker */
+  transform: rotate(-1deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.tape-sticker-header {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #c92722;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.email-sticker {
+  top: 22%;
+  left: 55%;
+  transform: rotate(3deg);
+}
+
+.sticker-email-link {
+  font-family: "Caveat", cursive;
+  color: #201c18;
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.sticker-email-link:hover {
+  color: #c92722;
+}
+
+.handle-sticker {
+  top: 50%;
+  left: 62%;
+  transform: rotate(-2deg);
+}
+
+.sticker-handle-text {
+  font-family: "Caveat", cursive;
+  color: #201c18;
+  font-size: clamp(1.6rem, 2.4vw, 2.3rem);
+  font-weight: 700;
+  display: block;
+}
+
+/* decorative arrows */
+.contact-decorative-arrow {
+  position: absolute;
+  top: 38%;
+  left: 45%;
+  width: 140px;
+  height: 140px;
+  z-index: 8;
+  pointer-events: none;
+  transform: rotate(-10deg);
+}
+
+.handwritten-arrow-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 1060px) {
+  .contact-notebook-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 80px auto 40px !important;
+    width: 90vw !important;
+    transform: none !important;
+  }
+
+  .floating-contact-sticker {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 20px auto !important;
+    width: 90vw !important;
+    transform: none !important;
+  }
+
+  .contact-decorative-arrow {
+    display: none;
+  }
+}
+
+

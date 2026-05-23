@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 700" role="img" aria-labelledby="title desc">
+  <title id="title">Stylized creator portrait placeholder</title>
+  <desc id="desc">A polished editorial placeholder of a fashion creator in red holding a camera.</desc>
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#231815" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="jacket" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f04c32"/>
+      <stop offset="1" stop-color="#b91917"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#efb79a"/>
+      <stop offset="1" stop-color="#d89073"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <path d="M183 181 C185 92 229 53 291 57 C351 61 392 107 387 190 C379 302 191 303 183 181Z" fill="#3a211d"/>
+    <path d="M173 596 C179 430 207 315 260 315 C319 315 352 430 361 596Z" fill="url(#skin)" stroke="#f9efe5" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M95 670 C108 466 151 335 230 303 L260 676Z" fill="url(#jacket)" stroke="#f9efe5" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M425 670 C412 466 368 335 289 303 L260 676Z" fill="url(#jacket)" stroke="#f9efe5" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M211 306 C217 376 236 418 260 418 C284 418 303 376 309 306 C292 325 227 325 211 306Z" fill="#e4a082"/>
+    <path d="M201 167 C204 104 232 78 268 77 C319 75 352 113 351 171 C350 245 316 290 269 291 C222 292 198 240 201 167Z" fill="url(#skin)"/>
+    <path d="M196 181 C201 112 234 85 287 88 C323 91 353 123 358 181 C344 142 314 128 272 132 C229 135 209 150 196 181Z" fill="#2d1917"/>
+    <path d="M198 165 C192 151 184 151 180 168 C176 186 187 204 201 204Z" fill="#d89073"/>
+    <path d="M350 165 C358 151 366 153 369 170 C372 188 362 204 348 204Z" fill="#d89073"/>
+    <path d="M238 235 C249 246 278 248 293 235" fill="none" stroke="#bd2e27" stroke-width="7" stroke-linecap="round"/>
+    <path d="M219 160 C239 151 262 151 281 160" fill="none" stroke="#2a1715" stroke-width="5" stroke-linecap="round"/>
+    <path d="M286 160 C307 151 330 152 346 162" fill="none" stroke="#2a1715" stroke-width="5" stroke-linecap="round"/>
+
+    <g transform="translate(138 198)">
+      <rect x="0" y="0" width="246" height="104" rx="28" fill="#f9efe5"/>
+      <rect x="15" y="14" width="98" height="74" rx="24" fill="#1f2021"/>
+      <rect x="133" y="14" width="98" height="74" rx="24" fill="#1f2021"/>
+      <path d="M112 51 C119 45 128 45 135 51" fill="none" stroke="#1f2021" stroke-width="10" stroke-linecap="round"/>
+      <path d="M30 27 C53 18 83 18 101 31" stroke="#4a4c51" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+      <path d="M148 27 C171 18 203 18 220 31" stroke="#4a4c51" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+    </g>
+
+    <g transform="translate(288 232)">
+      <path d="M15 42 C-18 55 -28 91 0 111 C25 130 62 106 56 73 C53 55 36 43 15 42Z" fill="#dfa082" stroke="#f9efe5" stroke-width="10"/>
+      <rect x="-76" y="0" width="142" height="96" rx="18" fill="#4c4d4f" stroke="#f9efe5" stroke-width="9"/>
+      <rect x="-49" y="-18" width="60" height="26" rx="8" fill="#2b2b2d" stroke="#f9efe5" stroke-width="7"/>
+      <circle cx="-6" cy="49" r="43" fill="#262729" stroke="#d9d3ca" stroke-width="12"/>
+      <circle cx="-6" cy="49" r="24" fill="#5d6269"/>
+      <circle cx="-17" cy="36" r="8" fill="#c7d5e2" opacity="0.85"/>
+    </g>
+
+    <path d="M143 407 C123 472 113 564 112 660" fill="none" stroke="#f9efe5" stroke-width="7" opacity="0.65"/>
+    <path d="M377 407 C397 472 407 564 408 660" fill="none" stroke="#f9efe5" stroke-width="7" opacity="0.65"/>
+  </g>
+</svg>

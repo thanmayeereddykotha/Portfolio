@@ -1,0 +1,741 @@
+/**
+ * ╔══════════════════════════════════════════════════════════════╗
+ * ║          SCRAPBOOK LAYOUT CONFIGURATION                      ║
+ * ║  Edit this file to reposition every element on the page.     ║
+ * ║                                                              ║
+ * ║  All positions are in % of the page (0–100).                 ║
+ * ║  top:  0 = top edge,  100 = bottom edge                      ║
+ * ║  left: 0 = left edge, 100 = right edge                       ║
+ * ║  rotate: degrees, e.g. -5, 12, 0                             ║
+ * ║  size: font-size in rem (for text) / px (for emojis)         ║
+ * ║                                                              ║
+ * ║  TIP: Open the live editor by pressing [E] in the browser    ║
+ * ║  to adjust with sliders, then paste the values back here.    ║
+ * ╚══════════════════════════════════════════════════════════════╝
+ */
+
+export const scrapbookConfig = {
+  "p1": {
+    "title": {
+      "label": "about Thanmayee",
+      "top": 8,
+      "left": 50,
+      "rotate": 0,
+      "size": 4.5
+    },
+    "texts": [
+      {
+        "id": "procaffeinator",
+        "label": "Certified procaffeinator",
+        "top": 27.5,
+        "left": 25.5,
+        "rotate": -4,
+        "size": 2.15,
+        "width": 190
+      },
+      {
+        "id": "loves",
+        "label": "Loves creating fashion, beauty, travel & lifestyle content",
+        "top": 45.5,
+        "left": 13,
+        "rotate": 2,
+        "size": 1.7,
+        "width": 220
+      },
+      {
+        "id": "concept",
+        "label": "Concept Architect",
+        "top": 81.5,
+        "left": 14.5,
+        "rotate": 11,
+        "size": 2.1,
+        "width": 140
+      },
+      {
+        "id": "pinterest",
+        "label": "Pinterest is her creative playground!",
+        "top": 29,
+        "left": 70,
+        "rotate": 3,
+        "size": 1.8,
+        "width": 200
+      },
+      {
+        "id": "years",
+        "label": "24 years young",
+        "top": 46,
+        "left": 68,
+        "rotate": -2,
+        "size": 1.5,
+        "width": 150
+      },
+      {
+        "id": "aesthetic",
+        "label": "Aesthetically obsessed",
+        "top": 63,
+        "left": 76.5,
+        "rotate": -15,
+        "size": 1.75,
+        "width": 150
+      },
+      {
+        "id": "storyteller",
+        "label": "Digital Storyteller",
+        "top": 77.5,
+        "left": 73.5,
+        "rotate": 2,
+        "size": 1.4,
+        "width": 150
+      }
+    ],
+    "emojis": [
+      {
+        "id": "camera",
+        "emoji": "📷",
+        "top": 25,
+        "left": 20,
+        "rotate": -8,
+        "size": 3.2
+      },
+      {
+        "id": "headphones",
+        "emoji": "🎧",
+        "top": 46,
+        "left": 31,
+        "rotate": -39,
+        "size": 4
+      },
+      {
+        "id": "clapper",
+        "emoji": "🎬",
+        "top": 85,
+        "left": 24.5,
+        "rotate": 28,
+        "size": 4.2
+      },
+      {
+        "id": "tv",
+        "emoji": "📺",
+        "top": 20,
+        "left": 75,
+        "rotate": 8,
+        "size": 3.5
+      },
+      {
+        "id": "disc",
+        "emoji": "💿",
+        "top": 45.5,
+        "left": 77,
+        "rotate": -12,
+        "size": 2.75
+      },
+      {
+        "id": "popcorn",
+        "emoji": "🍿",
+        "top": 64.5,
+        "left": 72,
+        "rotate": 6,
+        "size": 2.9
+      },
+      {
+        "id": "hearts",
+        "emoji": "❤️❤️",
+        "top": 60.5,
+        "left": 14.5,
+        "rotate": 4,
+        "size": 2.35
+      },
+      {
+        "id": "palette",
+        "emoji": "🎨",
+        "top": 83,
+        "left": 78,
+        "rotate": 15,
+        "size": 4.45
+      }
+    ],
+    "arrows": [
+      {
+        "id": "arrow-procaffeinator",
+        "top": 32.5,
+        "left": 36.5,
+        "width": 123,
+        "height": 60,
+        "rotate": 0,
+        "style": "simple",
+        "direction": "down-right",
+        "path": "M 10,10 Q 61.5,6 111,48",
+        "arrowTip": "M 111,48 L 99,50 M 111,48 L 107,36"
+      },
+      {
+        "id": "arrow-loves",
+        "top": 51,
+        "left": 24.5,
+        "width": 130,
+        "height": 101,
+        "rotate": 64,
+        "style": "wavy",
+        "direction": "up-right",
+        "path": "M 10,91 C 39,90.9 91,10.100000000000001 118,12",
+        "arrowTip": "M 118,12 L 106,10 M 118,12 L 114,24"
+      },
+      {
+        "id": "arrow-concept",
+        "top": 69.5,
+        "left": 18.5,
+        "width": 138,
+        "height": 99,
+        "rotate": 0,
+        "style": "loop",
+        "direction": "down-left",
+        "path": "M 128,10 C 75.9,4.95 48.3,94.05 75.9,94.05 C 103.5,94.05 75.9,4.95 12,87",
+        "arrowTip": "M 12,87 L 24,89 M 12,87 L 16,75"
+      },
+      {
+        "id": "arrow-pinterest",
+        "top": 32.5,
+        "left": 56.5,
+        "width": 189,
+        "height": 60,
+        "rotate": 0,
+        "style": "simple",
+        "direction": "down-left",
+        "path": "M 179,10 Q 94.5,6 12,48",
+        "arrowTip": "M 12,48 L 24,50 M 12,48 L 16,36"
+      },
+      {
+        "id": "arrow-years",
+        "top": 47.5,
+        "left": 58.5,
+        "width": 130,
+        "height": 21,
+        "rotate": 0,
+        "style": "sharp",
+        "direction": "down-left",
+        "path": "M 120,10 L 12,9",
+        "arrowTip": "M 12,9 L 24.920382766906748,16.619954668934657 M 12,9 L 25.05926570243663,1.620597631707411"
+      },
+      {
+        "id": "arrow-aesthetic",
+        "top": 82,
+        "left": 66.5,
+        "width": 167,
+        "height": 73,
+        "rotate": 0,
+        "style": "simple",
+        "direction": "up-right",
+        "path": "M 10,63 Q 83.5,65.7 155,12",
+        "arrowTip": "M 155,12 L 143,10 M 155,12 L 151,24"
+      },
+      {
+        "id": "arrow-storyteller",
+        "top": 59.5,
+        "left": 60.5,
+        "width": 182,
+        "height": 86,
+        "rotate": 49,
+        "style": "loop",
+        "direction": "up-right",
+        "path": "M 10,76 C 81.9,81.7 118.3,4.3 81.9,4.3 C 45.5,4.3 81.9,81.7 170,12",
+        "arrowTip": "M 170,12 L 158,10 M 170,12 L 166,24"
+      }
+    ],
+    "profile": {
+      "borderColor": "#c92722",
+      "borderSize": 6,
+      "gapSize": 4,
+      "top": 64.5,
+      "left": 46.5,
+      "width": 690
+    }
+  },
+  "p2": {
+    "title": {
+      "label": "My Creative Toolkit",
+      "top": 8,
+      "left": 25.5,
+      "rotate": -1,
+      "size": 4.8
+    },
+    "emojis": [
+      {
+        "id": "lips-p2",
+        "emoji": "💋",
+        "top": 8,
+        "left": 44,
+        "rotate": 15,
+        "size": 3.5
+      }
+    ],
+    "arrows": [
+      {
+        "id": "arrow-toolkit-title",
+        "top": 7,
+        "left": 0.5,
+        "width": 140,
+        "height": 50,
+        "rotate": 174,
+        "style": "simple",
+        "direction": "right-down",
+        "path": "M 10,40 Q 65,40 120,10",
+        "arrowTip": "M 120,10 L 108,12 M 120,10 L 116,22"
+      }
+    ],
+    "skills": [
+      {
+        "id": "video",
+        "label": "VIDEO EDITING",
+        "top": 25,
+        "left": 13.5,
+        "rotate": -11,
+        "size": 1.6,
+        "width": 170,
+        "rating": 5,
+        "textSize": 1.6,
+        "fontFamily": "'Caveat', cursive"
+      },
+      {
+        "id": "design",
+        "label": "DESIGN SKILLS",
+        "top": 20.5,
+        "left": 34.5,
+        "rotate": 14,
+        "size": 1.6,
+        "width": 165,
+        "rating": 5,
+        "textSize": 1.35,
+        "fontFamily": "'Playfair Display', serif"
+      },
+      {
+        "id": "storytelling",
+        "label": "VISUAL STORYTELLING",
+        "top": 18,
+        "left": 55,
+        "rotate": -2,
+        "size": 1.35,
+        "width": 170,
+        "rating": 5,
+        "textSize": 1.2,
+        "fontFamily": "'Inter', sans-serif"
+      },
+      {
+        "id": "strategy",
+        "label": "CONTENT STRATEGY",
+        "top": 32,
+        "left": 71.5,
+        "rotate": 17,
+        "size": 1.6,
+        "width": 170,
+        "rating": 5,
+        "textSize": 1.25,
+        "fontFamily": "'Dancing Script', cursive"
+      },
+      {
+        "id": "ai",
+        "label": "AI",
+        "top": 59,
+        "left": 29,
+        "rotate": 6,
+        "size": 1.25,
+        "width": 170,
+        "rating": 4,
+        "textSize": 2.6,
+        "fontFamily": "'Cinzel', serif"
+      },
+      {
+        "id": "copywriting",
+        "label": "Copywriting",
+        "top": 61.5,
+        "left": 45,
+        "rotate": -4,
+        "size": 1.45,
+        "width": 170,
+        "rating": 5,
+        "textSize": 1.85,
+        "fontFamily": "'Italiana', serif"
+      },
+      {
+        "id": "branding",
+        "label": "Branding",
+        "top": 66.5,
+        "left": 64,
+        "rotate": 10,
+        "size": 1.25,
+        "width": 170,
+        "rating": 5,
+        "textSize": 2.5,
+        "fontFamily": "'Sacramento', cursive"
+      }
+    ],
+    "tools": [
+      {
+        "id": "pinterest",
+        "name": "Pinterest",
+        "color": "#BD081C",
+        "svgType": "pinterest",
+        "top": 82,
+        "left": 4,
+        "rotate": -52,
+        "size": 4.15
+      },
+      {
+        "id": "instagram",
+        "name": "Instagram",
+        "color": "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
+        "svgType": "instagram",
+        "top": 66,
+        "left": 21.5,
+        "rotate": -49,
+        "size": 3.65
+      },
+      {
+        "id": "davinciresolve",
+        "name": "DaVinci Resolve",
+        "color": "#1A1A1A",
+        "svgType": "davinciresolve",
+        "top": 16,
+        "left": 73.5,
+        "rotate": -15,
+        "size": 3.35
+      },
+      {
+        "id": "canva",
+        "name": "Canva",
+        "color": "#00C4CC",
+        "svgType": "canva",
+        "top": 86,
+        "left": 82,
+        "rotate": 10,
+        "size": 4.05
+      },
+      {
+        "id": "photoshop",
+        "name": "Photoshop",
+        "color": "#31A8FF",
+        "svgType": "photoshop",
+        "top": 55.5,
+        "left": 62.5,
+        "rotate": -5,
+        "size": 2.8
+      },
+      {
+        "id": "capcut",
+        "name": "CapCut",
+        "color": "#000000",
+        "svgType": "capcut",
+        "top": 51,
+        "left": 92,
+        "rotate": 8,
+        "size": 3
+      },
+      {
+        "id": "inshot",
+        "name": "InShot",
+        "color": "#FF4C60",
+        "svgType": "inshot",
+        "top": 51,
+        "left": 8.5,
+        "rotate": -8,
+        "size": 2.8
+      }
+    ]
+  },
+  "p3": {
+    "title": {
+      "label": "How i work with Brands",
+      "subtitle": "• Creative Strategy & Storyboarding",
+      "top": 8,
+      "left": 50,
+      "rotate": 0,
+      "size": 4.2
+    },
+    "texts": [
+      {
+        "id": "seasonalMarketing",
+        "label": "Targeted Seasonal Marketing",
+        "top": 24,
+        "left": 4,
+        "rotate": -6,
+        "size": 1.6,
+        "width": 140
+      },
+      {
+        "id": "visualStorytelling",
+        "label": "Visual Storytelling",
+        "top": 21.5,
+        "left": 18.5,
+        "rotate": 2,
+        "size": 1.6,
+        "width": 200
+      },
+      {
+        "id": "solutionContent",
+        "label": "Solution-Based Content",
+        "top": 83,
+        "left": 2,
+        "rotate": -4,
+        "size": 1.7,
+        "width": 130
+      },
+      {
+        "id": "trendForecasting",
+        "label": "Trend Forecasting",
+        "top": 16.5,
+        "left": 89,
+        "rotate": 8,
+        "size": 1.95,
+        "width": 140
+      },
+      {
+        "id": "relatableStorytelling",
+        "label": "Relatable Storytelling",
+        "top": 78,
+        "left": 60,
+        "rotate": -4,
+        "size": 1.7,
+        "width": 150
+      },
+      {
+        "id": "targetAudience",
+        "label": "Focus on Target audience",
+        "top": 37.5,
+        "left": 57,
+        "rotate": 1,
+        "size": 1.7,
+        "width": 150
+      }
+    ],
+    "emojis": [],
+    "arrows": [
+      {
+        "id": "arrow-seasonal",
+        "top": 31.5,
+        "left": 10.5,
+        "width": 82,
+        "height": 39,
+        "rotate": 4,
+        "style": "simple",
+        "direction": "down-right",
+        "path": "M 10,10 Q 41,3.9000000000000004 70,27",
+        "arrowTip": "M 70,27 L 58,29 M 70,27 L 66,15"
+      },
+      {
+        "id": "arrow-visual",
+        "top": 28,
+        "left": 19,
+        "width": 83,
+        "height": 35,
+        "rotate": -77,
+        "style": "simple",
+        "direction": "down-left",
+        "path": "M 73,10 Q 41.5,3.5 12,23",
+        "arrowTip": "M 12,23 L 24,25 M 12,23 L 16,11"
+      },
+      {
+        "id": "arrow-solution",
+        "top": 69,
+        "left": 1,
+        "width": 133,
+        "height": 79,
+        "rotate": -84,
+        "style": "loop",
+        "direction": "down-right",
+        "path": "M 10,10 C 59.85,3.95 86.45,75.05 59.85,75.05 C 33.25,75.05 59.85,3.95 121,67",
+        "arrowTip": "M 121,67 L 109,69 M 121,67 L 117,55"
+      },
+      {
+        "id": "arrow-trend",
+        "top": 22,
+        "left": 79.5,
+        "width": 138,
+        "height": 70,
+        "rotate": -17,
+        "style": "loop",
+        "direction": "down-left",
+        "path": "M 128,10 C 75.9,3.5 48.3,66.5 75.9,66.5 C 103.5,66.5 75.9,3.5 12,58",
+        "arrowTip": "M 12,58 L 24,60 M 12,58 L 16,46"
+      },
+      {
+        "id": "arrow-relatable",
+        "top": 66,
+        "left": 62,
+        "width": 127,
+        "height": 71,
+        "rotate": -31,
+        "style": "simple",
+        "direction": "down-left",
+        "path": "M 117,10 Q 63.5,7.1000000000000005 12,59",
+        "arrowTip": "M 12,59 L 24,61 M 12,59 L 16,47"
+      },
+      {
+        "id": "arrow-target",
+        "top": 41,
+        "left": 50.5,
+        "width": 101,
+        "height": 40,
+        "rotate": -30,
+        "style": "simple",
+        "direction": "down-left",
+        "path": "M 91,10 Q 50.5,4 12,28",
+        "arrowTip": "M 12,28 L 24,30 M 12,28 L 16,16"
+      }
+    ],
+    "profile": {
+      "borderColor": "#c92722",
+      "borderSize": 6,
+      "gapSize": 4,
+      "top": 55,
+      "left": 50,
+      "width": 480
+    },
+    "notes": [
+      {
+        "id": "note-minutiae",
+        "type": "red",
+        "title": "MINUTIAE CONCEPT DECK",
+        "text": "Curate seasonal UGC transitions highlighting gold statement jewelry as the ultimate Valentine's gift. Focus on chapped lip season and aesthetic luxury stacking rings.",
+        "top": 36,
+        "left": 6.5,
+        "rotate": -11,
+        "width": 675,
+        "size": 0.8,
+        "speed": "slow"
+      },
+      {
+        "id": "note-kay-beauty",
+        "type": "red",
+        "title": "KAY BEAUTY LAUNCH",
+        "text": "Curate high-impact cosmetic application Reels focusing on texture, shade-inclusivity, and transfer-proof performance during cold-weather transit. 'Chapped lip season is officially here, let's swatch.'",
+        "top": 48.5,
+        "left": 21.5,
+        "rotate": 3,
+        "width": 540,
+        "size": 1,
+        "speed": "medium"
+      },
+      {
+        "id": "note-mejuri",
+        "type": "red",
+        "title": "MEJURI CREATIVE BRIEF",
+        "text": "Everyday Luxury: Warm sunbeams, close-up texture, organic movement. Emphasize hypoallergenic 14k gold stacking rings, worn effortlessly during routine morning habits. Instagram Reels & Pinterest aesthetics.",
+        "top": 68,
+        "left": 11.5,
+        "rotate": -2,
+        "width": 540,
+        "size": 1,
+        "speed": "slow"
+      },
+      {
+        "id": "note-ishkaara",
+        "type": "white",
+        "title": "ISHKAARA CAMPAIGN",
+        "text": "SCRIPT: 'Ever wondered how the perfect jewelry transforms a simple look?' These beautiful kundan jhumkas are my absolute go-to for adding that effortless festive elegance. Style transition Reels and direct call-to-actions.",
+        "top": 34,
+        "left": 69,
+        "rotate": -3,
+        "width": 360,
+        "size": 1,
+        "speed": "slow"
+      },
+      {
+        "id": "note-laneige",
+        "type": "white",
+        "title": "LANEIGE LIP CARE",
+        "text": "SCRIPT OUTLINE: 0:00 - 'Did you know your lips lose moisture 3x faster?' 0:05 - overnight Lip Sleeping Mask texture scoop. 0:10 - application showing glossy protective barrier. 0:15 - call to action: swipe up.",
+        "top": 57,
+        "left": 68.5,
+        "rotate": 2,
+        "width": 330,
+        "size": 1.2,
+        "speed": "medium"
+      }
+    ]
+  },
+  "p4": {
+    "title": {
+      "label": "My Work",
+      "top": 3,
+      "left": 68.5,
+      "rotate": 0,
+      "size": 4.5
+    },
+    "arrows": [
+      {
+        "id": "arrow-mywork",
+        "top": 0,
+        "left": 82.5,
+        "width": 244,
+        "height": 132,
+        "rotate": -203,
+        "style": "loop",
+        "direction": "down-right",
+        "path": "M 10,10 C 109.8,6.6000000000000005 158.6,125.39999999999999 109.8,125.39999999999999 C 61,125.39999999999999 109.8,6.6000000000000005 232,120",
+        "arrowTip": "M 232,120 L 220,122 M 232,120 L 228,108",
+        "strokeWidth": 6
+      }
+    ],
+    "highlight": {
+      "id": "highlight-mywork",
+      "top": 15,
+      "left": 42.5,
+      "width": 15,
+      "height": 10
+    },
+    "videos": [
+      {
+        "id": "video-maliao",
+        "brandName": "maliao®",
+        "top": 2.5,
+        "left": 1,
+        "rotate": 0,
+        "size": 270,
+        "videoUrl": "https://vimeo.com/1194927101?share=copy&fl=sv&fe=ci"
+      },
+      {
+        "id": "video-masking",
+        "brandName": "Masking",
+        "top": 26,
+        "left": 16,
+        "rotate": 0,
+        "size": 270,
+        "videoUrl": "https://vimeo.com/1194927309?fl=pl&fe=sh"
+      },
+      {
+        "id": "video-wellthink",
+        "brandName": "WELLTHINK",
+        "top": 8.5,
+        "left": 31.5,
+        "rotate": 0,
+        "size": 270,
+        "videoUrl": "https://vimeo.com/1194927310?fl=pl&fe=sh"
+      },
+      {
+        "id": "video-ishkaara",
+        "brandName": "ishkaara",
+        "top": 29.5,
+        "left": 49,
+        "rotate": 0,
+        "size": 270,
+        "videoUrl": "https://vimeo.com/1194928589?share=copy&fl=sv&fe=ci"
+      },
+      {
+        "id": "video-brand5",
+        "brandName": "KAY BEAUTY",
+        "top": 14.5,
+        "left": 66,
+        "rotate": 0,
+        "size": 270,
+        "videoUrl": "https://vimeo.com/1194928590?share=copy&fl=sv&fe=ci"
+      },
+      {
+        "id": "video-brand6",
+        "brandName": "LANEIGE",
+        "top": 26,
+        "left": 82,
+        "rotate": 0,
+        "size": 270,
+        "videoUrl": "https://vimeo.com/1194928588?share=copy&fl=sv&fe=ci"
+      }
+    ]
+  }
+}

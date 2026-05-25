@@ -84,10 +84,10 @@ export const scrapbookConfig = {
       {
         "id": "headphones",
         "emoji": "🎧",
-        "top": 46,
-        "left": 31,
-        "rotate": -39,
-        "size": 4
+        "top": 63,
+        "left": 82,
+        "rotate": 16,
+        "size": 2.7
       },
       {
         "id": "clapper",
@@ -108,15 +108,15 @@ export const scrapbookConfig = {
       {
         "id": "disc",
         "emoji": "💿",
-        "top": 41.5,
-        "left": 82,
-        "rotate": -12,
-        "size": 2.75
+        "top": 44,
+        "left": 71.5,
+        "rotate": -36,
+        "size": 2.1
       },
       {
         "id": "popcorn",
         "emoji": "🍿",
-        "top": 63,
+        "top": 27.5,
         "left": 81.5,
         "rotate": 6,
         "size": 2.9

@@ -142,14 +142,14 @@ export const scrapbookConfig = {
       {
         "id": "arrow-procaffeinator",
         "top": 31,
-        "left": 33,
-        "width": 123,
+        "left": 31.5,
+        "width": 135,
         "height": 60,
         "rotate": 0,
         "style": "simple",
         "direction": "down-right",
-        "path": "M 10,10 Q 61.5,6 111,48",
-        "arrowTip": "M 111,48 L 99,50 M 111,48 L 107,36"
+        "path": "M 10,10 Q 67.5,6 123,48",
+        "arrowTip": "M 123,48 L 111,50 M 123,48 L 119,36"
       },
       {
         "id": "arrow-loves",
@@ -177,19 +177,19 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-pinterest",
-        "top": 31,
+        "top": 30,
         "left": 57,
-        "width": 189,
-        "height": 60,
+        "width": 196,
+        "height": 72,
         "rotate": 0,
         "style": "simple",
         "direction": "down-left",
-        "path": "M 179,10 Q 94.5,6 12,48",
-        "arrowTip": "M 12,48 L 24,50 M 12,48 L 16,36"
+        "path": "M 186,10 Q 98,7.2 12,60",
+        "arrowTip": "M 12,60 L 24,62 M 12,60 L 16,48"
       },
       {
         "id": "arrow-years",
-        "top": 48,
+        "top": 47,
         "left": 65,
         "width": 141,
         "height": 64,
@@ -202,7 +202,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-aesthetic",
-        "top": 77.5,
+        "top": 77,
         "left": 65,
         "width": 195,
         "height": 61,
@@ -214,15 +214,15 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-storyteller",
-        "top": 59.5,
-        "left": 63,
-        "width": 182,
-        "height": 105,
+        "top": 61.5,
+        "left": 65.5,
+        "width": 148,
+        "height": 101,
         "rotate": 12,
         "style": "loop",
         "direction": "up-right",
-        "path": "M 10,95 C 81.9,99.75 118.3,5.25 81.9,5.25 C 45.5,5.25 81.9,99.75 170,12",
-        "arrowTip": "M 170,12 L 158,10 M 170,12 L 166,24",
+        "path": "M 10,91 C 66.60000000000001,95.94999999999999 96.2,5.050000000000001 66.60000000000001,5.050000000000001 C 37,5.050000000000001 66.60000000000001,95.94999999999999 136,12",
+        "arrowTip": "M 136,12 L 124,10 M 136,12 L 132,24",
         "strokeWidth": 2.5
       }
     ],

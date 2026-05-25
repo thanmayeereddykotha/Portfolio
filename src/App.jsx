@@ -336,7 +336,7 @@ function HeroIntro({ config, scrollContainer }) {
               viewport={{ amount: 0.3, once: true }}
               style={{ y: ySlow }}
             >
-              <img src="/TRL.png" alt="Thanmayee Reddy" className="cutout-main" />
+              <img src="/TRK.jpg" alt="Thanmayee Reddy" className="cutout-main" />
             </motion.div>
           </div>
 

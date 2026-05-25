@@ -2,3 +2,4 @@ node_modules/
 dist/
 .npm-cache/
 .vite/
+.DS_Store

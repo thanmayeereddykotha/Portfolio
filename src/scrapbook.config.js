@@ -246,9 +246,9 @@ export const scrapbookConfig = {
     "emojis": [
       {
         "id": "lips-p2",
-        "emoji": "💋",
-        "top": 8,
-        "left": 44,
+        "emoji": "📲🪄",
+        "top": 11,
+        "left": 43.5,
         "rotate": 15,
         "size": 3.5
       }
@@ -270,11 +270,11 @@ export const scrapbookConfig = {
     "skills": [
       {
         "id": "video",
-        "label": "VIDEO EDITING",
+        "label": "UGC Cotent Creation",
         "top": 25,
-        "left": 13.5,
+        "left": 11.5,
         "rotate": -11,
-        "size": 1.6,
+        "size": 1.55,
         "width": 170,
         "rating": 5,
         "textSize": 1.6,
@@ -282,9 +282,9 @@ export const scrapbookConfig = {
       },
       {
         "id": "design",
-        "label": "DESIGN SKILLS",
-        "top": 20.5,
-        "left": 34.5,
+        "label": "BRAND CAMPAIGN CONCEPTS",
+        "top": 24.5,
+        "left": 33.5,
         "rotate": 14,
         "size": 1.6,
         "width": 165,
@@ -307,30 +307,30 @@ export const scrapbookConfig = {
       {
         "id": "strategy",
         "label": "CONTENT STRATEGY",
-        "top": 32,
-        "left": 71.5,
+        "top": 32.5,
+        "left": 72.5,
         "rotate": 17,
         "size": 1.6,
         "width": 170,
         "rating": 5,
-        "textSize": 1.25,
-        "fontFamily": "'Dancing Script', cursive"
+        "textSize": 2.1,
+        "fontFamily": "'Italiana', serif"
       },
       {
         "id": "ai",
-        "label": "AI",
-        "top": 66,
-        "left": 29,
+        "label": "VIDEO EDITING",
+        "top": 61.5,
+        "left": 26,
         "rotate": 6,
-        "size": 1.1,
+        "size": 1.3,
         "width": 170,
-        "rating": 4,
-        "textSize": 2.6,
+        "rating": 5,
+        "textSize": 1.65,
         "fontFamily": "'Cinzel', serif"
       },
       {
         "id": "copywriting",
-        "label": "Copywriting",
+        "label": "Copywriting AND SCRIPTS",
         "top": 61.5,
         "left": 45,
         "rotate": -4,
@@ -342,9 +342,9 @@ export const scrapbookConfig = {
       },
       {
         "id": "branding",
-        "label": "Branding",
+        "label": "Brand Identity",
         "top": 66.5,
-        "left": 64,
+        "left": 66,
         "rotate": 10,
         "size": 1.25,
         "width": 170,
@@ -359,9 +359,9 @@ export const scrapbookConfig = {
         "name": "Pinterest",
         "color": "#BD081C",
         "svgType": "pinterest",
-        "top": 82,
-        "left": 4,
-        "rotate": -52,
+        "top": 49.5,
+        "left": 54.5,
+        "rotate": -13,
         "size": 4.15
       },
       {
@@ -369,9 +369,9 @@ export const scrapbookConfig = {
         "name": "Instagram",
         "color": "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
         "svgType": "instagram",
-        "top": 66,
-        "left": 21.5,
-        "rotate": -49,
+        "top": 28,
+        "left": 29.5,
+        "rotate": 269,
         "size": 3.65
       },
       {
@@ -379,8 +379,8 @@ export const scrapbookConfig = {
         "name": "DaVinci Resolve",
         "color": "#1A1A1A",
         "svgType": "davinciresolve",
-        "top": 16,
-        "left": 73.5,
+        "top": 66,
+        "left": 21.5,
         "rotate": -15,
         "size": 3.35
       },
@@ -389,8 +389,8 @@ export const scrapbookConfig = {
         "name": "Canva",
         "color": "#00C4CC",
         "svgType": "canva",
-        "top": 86,
-        "left": 82,
+        "top": 50,
+        "left": 63.5,
         "rotate": 10,
         "size": 4.05
       },
@@ -399,28 +399,28 @@ export const scrapbookConfig = {
         "name": "Photoshop",
         "color": "#31A8FF",
         "svgType": "photoshop",
-        "top": 55.5,
+        "top": 61.5,
         "left": 62.5,
         "rotate": -5,
-        "size": 2.8
+        "size": 3.6
       },
       {
         "id": "capcut",
         "name": "CapCut",
         "color": "#000000",
         "svgType": "capcut",
-        "top": 51,
-        "left": 92,
-        "rotate": 8,
-        "size": 3
+        "top": 28,
+        "left": 71.5,
+        "rotate": -360,
+        "size": 2.85
       },
       {
         "id": "inshot",
         "name": "InShot",
         "color": "#FF4C60",
         "svgType": "inshot",
-        "top": 51,
-        "left": 8.5,
+        "top": 54.5,
+        "left": 30,
         "rotate": -8,
         "size": 2.8
       }

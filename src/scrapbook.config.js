@@ -2,15 +2,15 @@ export const scrapbookConfig = {
   "p1": {
     "title": {
       "label": "about Thanu",
-      "top": 11.5,
-      "left": 50,
+      "top": 11,
+      "left": 49,
       "rotate": 0,
-      "size": 5.3
+      "size": 5.4
     },
     "texts": [
       {
         "id": "procaffeinator",
-        "label": "Certified procaffeinator",
+        "label": "Content Creator",
         "top": 27.5,
         "left": 25.5,
         "rotate": -4,
@@ -19,7 +19,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "loves",
-        "label": "Loves creating fashion, beauty, travel & lifestyle content",
+        "label": "Loves creating fashion, beauty, UGC, travel & lifestyle content",
         "top": 45.5,
         "left": 13,
         "rotate": 2,
@@ -28,7 +28,7 @@ export const scrapbookConfig = {
       },
       {
         "id": "concept",
-        "label": "Concept Architect",
+        "label": "Brand Strategist",
         "top": 81.5,
         "left": 14.5,
         "rotate": 11,
@@ -47,8 +47,8 @@ export const scrapbookConfig = {
       {
         "id": "years",
         "label": "21 years young",
-        "top": 46,
-        "left": 68,
+        "top": 45.5,
+        "left": 74,
         "rotate": -2,
         "size": 1.5,
         "width": 150
@@ -56,8 +56,8 @@ export const scrapbookConfig = {
       {
         "id": "aesthetic",
         "label": "Aesthetically obsessed",
-        "top": 63,
-        "left": 76.5,
+        "top": 59,
+        "left": 75.5,
         "rotate": -15,
         "size": 1.75,
         "width": 150
@@ -65,8 +65,8 @@ export const scrapbookConfig = {
       {
         "id": "storyteller",
         "label": "Digital Storyteller",
-        "top": 75.5,
-        "left": 73.5,
+        "top": 75,
+        "left": 77.5,
         "rotate": 2,
         "size": 1.4,
         "width": 150
@@ -76,8 +76,8 @@ export const scrapbookConfig = {
       {
         "id": "camera",
         "emoji": "📷",
-        "top": 25,
-        "left": 20,
+        "top": 31,
+        "left": 21.5,
         "rotate": -8,
         "size": 3.2
       },
@@ -92,15 +92,15 @@ export const scrapbookConfig = {
       {
         "id": "clapper",
         "emoji": "🎬",
-        "top": 85,
-        "left": 24.5,
+        "top": 83,
+        "left": 23.5,
         "rotate": 28,
         "size": 4.2
       },
       {
         "id": "tv",
         "emoji": "📺",
-        "top": 20,
+        "top": 22,
         "left": 75,
         "rotate": 8,
         "size": 3.5
@@ -108,31 +108,31 @@ export const scrapbookConfig = {
       {
         "id": "disc",
         "emoji": "💿",
-        "top": 45.5,
-        "left": 77,
+        "top": 41.5,
+        "left": 82,
         "rotate": -12,
         "size": 2.75
       },
       {
         "id": "popcorn",
         "emoji": "🍿",
-        "top": 64.5,
-        "left": 72,
+        "top": 63,
+        "left": 81.5,
         "rotate": 6,
         "size": 2.9
       },
       {
         "id": "hearts",
         "emoji": "❤️",
-        "top": 60.5,
-        "left": 14.5,
+        "top": 54,
+        "left": 24,
         "rotate": 4,
         "size": 2.35
       },
       {
         "id": "palette",
         "emoji": "🎨",
-        "top": 83,
+        "top": 78,
         "left": 78,
         "rotate": 15,
         "size": 4.45
@@ -141,8 +141,8 @@ export const scrapbookConfig = {
     "arrows": [
       {
         "id": "arrow-procaffeinator",
-        "top": 32.5,
-        "left": 36.5,
+        "top": 31,
+        "left": 33,
         "width": 123,
         "height": 60,
         "rotate": 0,
@@ -153,32 +153,32 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-loves",
-        "top": 49,
-        "left": 24.5,
+        "top": 52,
+        "left": 20.5,
         "width": 130,
-        "height": 101,
-        "rotate": 64,
+        "height": 129,
+        "rotate": 55,
         "style": "wavy",
         "direction": "up-right",
-        "path": "M 10,91 C 39,90.9 91,10.100000000000001 118,12",
+        "path": "M 10,119 C 39,116.10000000000001 91,12.9 118,12",
         "arrowTip": "M 118,12 L 106,10 M 118,12 L 114,24"
       },
       {
         "id": "arrow-concept",
-        "top": 69.5,
-        "left": 18.5,
-        "width": 138,
-        "height": 99,
+        "top": 70.5,
+        "left": 20,
+        "width": 157,
+        "height": 95,
         "rotate": 0,
         "style": "loop",
         "direction": "down-left",
-        "path": "M 128,10 C 75.9,4.95 48.3,94.05 75.9,94.05 C 103.5,94.05 75.9,4.95 12,87",
-        "arrowTip": "M 12,87 L 24,89 M 12,87 L 16,75"
+        "path": "M 147,10 C 86.35000000000001,4.75 54.949999999999996,90.25 86.35000000000001,90.25 C 117.75,90.25 86.35000000000001,4.75 12,83",
+        "arrowTip": "M 12,83 L 24,85 M 12,83 L 16,71"
       },
       {
         "id": "arrow-pinterest",
-        "top": 31.5,
-        "left": 56.5,
+        "top": 31,
+        "left": 57,
         "width": 189,
         "height": 60,
         "rotate": 0,
@@ -189,48 +189,50 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-years",
-        "top": 47.5,
-        "left": 58.5,
-        "width": 130,
-        "height": 21,
-        "rotate": 0,
-        "style": "sharp",
-        "direction": "down-left",
-        "path": "M 120,10 L 12,9",
-        "arrowTip": "M 12,9 L 24.920382766906748,16.619954668934657 M 12,9 L 25.05926570243663,1.620597631707411"
+        "top": 48,
+        "left": 65,
+        "width": 141,
+        "height": 64,
+        "rotate": 1,
+        "style": "simple",
+        "direction": "up-right",
+        "path": "M 10,54 Q 70.5,57.6 129,12",
+        "arrowTip": "M 129,12 L 117,10 M 129,12 L 125,24",
+        "strokeWidth": 2.5
       },
       {
         "id": "arrow-aesthetic",
         "top": 77.5,
-        "left": 66.5,
-        "width": 167,
-        "height": 73,
+        "left": 65,
+        "width": 195,
+        "height": 61,
         "rotate": 0,
         "style": "simple",
         "direction": "up-right",
-        "path": "M 10,63 Q 83.5,65.7 155,12",
-        "arrowTip": "M 155,12 L 143,10 M 155,12 L 151,24"
+        "path": "M 10,51 Q 97.5,54.9 183,12",
+        "arrowTip": "M 183,12 L 171,10 M 183,12 L 179,24"
       },
       {
         "id": "arrow-storyteller",
-        "top": 57,
-        "left": 60.5,
+        "top": 59.5,
+        "left": 63,
         "width": 182,
-        "height": 86,
-        "rotate": 49,
+        "height": 105,
+        "rotate": 12,
         "style": "loop",
         "direction": "up-right",
-        "path": "M 10,76 C 81.9,81.7 118.3,4.3 81.9,4.3 C 45.5,4.3 81.9,81.7 170,12",
-        "arrowTip": "M 170,12 L 158,10 M 170,12 L 166,24"
+        "path": "M 10,95 C 81.9,99.75 118.3,5.25 81.9,5.25 C 45.5,5.25 81.9,99.75 170,12",
+        "arrowTip": "M 170,12 L 158,10 M 170,12 L 166,24",
+        "strokeWidth": 2.5
       }
     ],
     "profile": {
       "borderColor": "#dcacc1",
-      "borderSize": 6,
-      "gapSize": 4,
-      "top": 66.5,
-      "left": 46.5,
-      "width": 690
+      "borderSize": 5.5,
+      "gapSize": 5.5,
+      "top": 63,
+      "left": 48,
+      "width": 485
     }
   },
   "p2": {

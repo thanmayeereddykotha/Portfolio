@@ -144,12 +144,12 @@ export const scrapbookConfig = {
         "top": 32,
         "left": 32,
         "width": 208,
-        "height": 64,
+        "height": 83,
         "rotate": 0,
         "style": "simple",
         "direction": "down-right",
-        "path": "M 10,10 Q 104,6.4 196,52",
-        "arrowTip": "M 196,52 L 184,54 M 196,52 L 192,40"
+        "path": "M 10,10 Q 104,8.3 196,71",
+        "arrowTip": "M 196,71 L 184,73 M 196,71 L 192,59"
       },
       {
         "id": "arrow-loves",
@@ -177,15 +177,15 @@ export const scrapbookConfig = {
       },
       {
         "id": "arrow-pinterest",
-        "top": 31.5,
-        "left": 58,
-        "width": 184,
-        "height": 47,
+        "top": 30.5,
+        "left": 56,
+        "width": 213,
+        "height": 45,
         "rotate": 0,
         "style": "simple",
         "direction": "down-left",
-        "path": "M 174,10 Q 92,4.7 12,35",
-        "arrowTip": "M 12,35 L 24,37 M 12,35 L 16,23"
+        "path": "M 203,10 Q 106.5,4.5 12,33",
+        "arrowTip": "M 12,33 L 24,35 M 12,33 L 16,21"
       },
       {
         "id": "arrow-years",

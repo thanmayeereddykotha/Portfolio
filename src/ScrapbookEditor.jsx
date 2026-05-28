@@ -575,6 +575,32 @@ export default function ScrapbookEditor({ config, onChange }) {
   const noteFields = [
     { key: "title", label: "Note Title", type: "text", default: "" },
     { key: "text", label: "Note Content", type: "textarea", default: "" },
+    {
+      key: "type",
+      label: "Paper Style",
+      type: "select",
+      options: [
+        { value: "white", label: "White (Elegant Note)" },
+        { value: "red", label: "Red (2-Page Context Card)" },
+        { value: "booklet", label: "Booklet (3-Page Open Booklet)" }
+      ],
+      default: "white"
+    },
+    {
+      key: "speed",
+      label: "Parallax Speed",
+      type: "select",
+      options: [
+        { value: "slow", label: "Slow" },
+        { value: "medium", label: "Medium" }
+      ],
+      default: "slow"
+    },
+    { key: "coverTitle", label: "Cover Title", type: "text", default: "" },
+    { key: "coverSubtitle", label: "Cover Subtitle", type: "text", default: "" },
+    { key: "coverCursive", label: "Cover Cursive", type: "text", default: "" },
+    { key: "image1", label: "Image 1 (Product)", type: "text", default: "" },
+    { key: "image2", label: "Image 2 (Model/UGC)", type: "text", default: "" },
     { key: "top", label: "Top %", min: 0, max: 100, step: 0.5 },
     { key: "left", label: "Left %", min: 0, max: 100, step: 0.5 },
     { key: "rotate", label: "Rotate °", min: -360, max: 360, step: 1 },

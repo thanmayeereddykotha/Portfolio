@@ -11,8 +11,8 @@ export const scrapbookConfig = {
       {
         "id": "procaffeinator",
         "label": "Content Creator",
-        "top": 27.5,
-        "left": 25.5,
+        "top": 29,
+        "left": 26,
         "rotate": -4,
         "size": 2.15,
         "width": 190
@@ -29,7 +29,7 @@ export const scrapbookConfig = {
       {
         "id": "concept",
         "label": "Brand Strategist",
-        "top": 81.5,
+        "top": 79.5,
         "left": 14.5,
         "rotate": 11,
         "size": 2.1,
@@ -141,88 +141,88 @@ export const scrapbookConfig = {
     "arrows": [
       {
         "id": "arrow-procaffeinator",
-        "top": 31,
-        "left": 31.5,
-        "width": 135,
-        "height": 60,
+        "top": 32,
+        "left": 32,
+        "width": 208,
+        "height": 64,
         "rotate": 0,
         "style": "simple",
         "direction": "down-right",
-        "path": "M 10,10 Q 67.5,6 123,48",
-        "arrowTip": "M 123,48 L 111,50 M 123,48 L 119,36"
+        "path": "M 10,10 Q 104,6.4 196,52",
+        "arrowTip": "M 196,52 L 184,54 M 196,52 L 192,40"
       },
       {
         "id": "arrow-loves",
-        "top": 52,
-        "left": 20.5,
-        "width": 130,
-        "height": 129,
+        "top": 43,
+        "left": 29,
+        "width": 203,
+        "height": 165,
         "rotate": 55,
         "style": "wavy",
         "direction": "up-right",
-        "path": "M 10,119 C 39,116.10000000000001 91,12.9 118,12",
-        "arrowTip": "M 118,12 L 106,10 M 118,12 L 114,24"
+        "path": "M 10,155 C 60.9,148.5 142.1,16.5 191,12",
+        "arrowTip": "M 191,12 L 179,10 M 191,12 L 187,24"
       },
       {
         "id": "arrow-concept",
-        "top": 70.5,
+        "top": 70,
         "left": 20,
-        "width": 157,
+        "width": 303,
         "height": 95,
         "rotate": 0,
         "style": "loop",
         "direction": "down-left",
-        "path": "M 147,10 C 86.35000000000001,4.75 54.949999999999996,90.25 86.35000000000001,90.25 C 117.75,90.25 86.35000000000001,4.75 12,83",
+        "path": "M 293,10 C 166.65,4.75 106.05,90.25 166.65,90.25 C 227.25,90.25 166.65,4.75 12,83",
         "arrowTip": "M 12,83 L 24,85 M 12,83 L 16,71"
       },
       {
         "id": "arrow-pinterest",
-        "top": 30,
-        "left": 57,
-        "width": 196,
-        "height": 72,
+        "top": 31.5,
+        "left": 58,
+        "width": 184,
+        "height": 47,
         "rotate": 0,
         "style": "simple",
         "direction": "down-left",
-        "path": "M 186,10 Q 98,7.2 12,60",
-        "arrowTip": "M 12,60 L 24,62 M 12,60 L 16,48"
+        "path": "M 174,10 Q 92,4.7 12,35",
+        "arrowTip": "M 12,35 L 24,37 M 12,35 L 16,23"
       },
       {
         "id": "arrow-years",
-        "top": 47,
-        "left": 65,
-        "width": 141,
+        "top": 48,
+        "left": 59.5,
+        "width": 217,
         "height": 64,
         "rotate": 1,
         "style": "simple",
         "direction": "up-right",
-        "path": "M 10,54 Q 70.5,57.6 129,12",
-        "arrowTip": "M 129,12 L 117,10 M 129,12 L 125,24",
+        "path": "M 10,54 Q 108.5,57.6 205,12",
+        "arrowTip": "M 205,12 L 193,10 M 205,12 L 201,24",
         "strokeWidth": 2.5
       },
       {
         "id": "arrow-aesthetic",
         "top": 77,
-        "left": 65,
-        "width": 195,
+        "left": 61.5,
+        "width": 242,
         "height": 61,
         "rotate": 0,
         "style": "simple",
         "direction": "up-right",
-        "path": "M 10,51 Q 97.5,54.9 183,12",
-        "arrowTip": "M 183,12 L 171,10 M 183,12 L 179,24"
+        "path": "M 10,51 Q 121,54.9 230,12",
+        "arrowTip": "M 230,12 L 218,10 M 230,12 L 226,24"
       },
       {
         "id": "arrow-storyteller",
-        "top": 61.5,
-        "left": 65.5,
-        "width": 148,
-        "height": 101,
+        "top": 62.5,
+        "left": 60.5,
+        "width": 227,
+        "height": 70,
         "rotate": 12,
         "style": "loop",
         "direction": "up-right",
-        "path": "M 10,91 C 66.60000000000001,95.94999999999999 96.2,5.050000000000001 66.60000000000001,5.050000000000001 C 37,5.050000000000001 66.60000000000001,95.94999999999999 136,12",
-        "arrowTip": "M 136,12 L 124,10 M 136,12 L 132,24",
+        "path": "M 10,60 C 102.15,66.5 147.55,3.5 102.15,3.5 C 56.75,3.5 102.15,66.5 215,12",
+        "arrowTip": "M 215,12 L 203,10 M 215,12 L 211,24",
         "strokeWidth": 2.5
       }
     ],
@@ -585,7 +585,12 @@ export const scrapbookConfig = {
         "rotate": -11,
         "width": 675,
         "size": 0.8,
-        "speed": "slow"
+        "speed": "slow",
+        "coverTitle": "MINUTIAE",
+        "coverSubtitle": "Valentine's Day",
+        "coverCursive": "Shoot Concept",
+        "image1": "/minutiae_product.png",
+        "image2": "/ishkaara_model.png"
       },
       {
         "id": "note-kay-beauty",
@@ -597,7 +602,12 @@ export const scrapbookConfig = {
         "rotate": 3,
         "width": 540,
         "size": 1,
-        "speed": "medium"
+        "speed": "medium",
+        "coverTitle": "KAY BEAUTY",
+        "coverSubtitle": "Launch Brief",
+        "coverCursive": "UGC & Swatches",
+        "image1": "/minutiae_product.png",
+        "image2": "/ishkaara_model.png"
       },
       {
         "id": "note-mejuri",
@@ -609,19 +619,29 @@ export const scrapbookConfig = {
         "rotate": -2,
         "width": 540,
         "size": 1,
-        "speed": "slow"
+        "speed": "slow",
+        "coverTitle": "MEJURI",
+        "coverSubtitle": "Creative Brief",
+        "coverCursive": "Everyday Luxury",
+        "image1": "/minutiae_product.png",
+        "image2": "/ishkaara_model.png"
       },
       {
         "id": "note-ishkaara",
         "type": "white",
         "title": "ISHKAARA CAMPAIGN",
-        "text": "SCRIPT: 'Ever wondered how the perfect jewelry transforms a simple look?' These beautiful kundan jhumkas are my absolute go-to for adding that effortless festive elegance. Style transition Reels and direct call-to-actions.",
+        "text": "SCRIPT: 'Ever wondered how the perfect jewelry transforms a simple look?' These beautiful kundan jhumkas are my absolute go-to for adding that festive elegance. Style transition Reels and direct call-to-actions.",
         "top": 34,
         "left": 69,
         "rotate": -3,
         "width": 360,
         "size": 1,
-        "speed": "slow"
+        "speed": "slow",
+        "coverTitle": "ISHKAARA",
+        "coverSubtitle": "Festive Elegance",
+        "coverCursive": "Styling Script",
+        "image1": "/minutiae_product.png",
+        "image2": "/ishkaara_model.png"
       },
       {
         "id": "note-laneige",
@@ -633,7 +653,12 @@ export const scrapbookConfig = {
         "rotate": 2,
         "width": 330,
         "size": 1.2,
-        "speed": "medium"
+        "speed": "medium",
+        "coverTitle": "LANEIGE",
+        "coverSubtitle": "Lip Sleeping Mask",
+        "coverCursive": "Night Routine",
+        "image1": "/minutiae_product.png",
+        "image2": "/ishkaara_model.png"
       }
     ]
   },
@@ -675,7 +700,7 @@ export const scrapbookConfig = {
         "left": 1,
         "rotate": 0,
         "size": 270,
-        "videoUrl": "https://vimeo.com/1194927101?share=copy&fl=sv&fe=ci"
+        "videoUrl": "https://vimeo.com/1195559054?share=copy&fl=sv&fe=ci"
       },
       {
         "id": "video-masking",

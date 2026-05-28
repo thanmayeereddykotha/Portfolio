@@ -52,18 +52,18 @@ const cardSlideIn = {
 // ─────────────────────────────────────────────────────────────────
 
 const pillars = [
-  { title: "Fashion",   note: "outfits, styling, GRWM edits",    className: "pillar-fashion" },
-  { title: "Beauty",    note: "glam, skincare, soft routines",    className: "pillar-beauty" },
-  { title: "Lifestyle", note: "days out, hauls, personal diary",  className: "pillar-lifestyle" },
-  { title: "Food",      note: "cafes, cravings, food finds",      className: "pillar-food" },
+  { title: "Fashion", note: "outfits, styling, GRWM edits", className: "pillar-fashion" },
+  { title: "Beauty", note: "glam, skincare, soft routines", className: "pillar-beauty" },
+  { title: "Lifestyle", note: "days out, hauls, personal diary", className: "pillar-lifestyle" },
+  { title: "Food", note: "cafes, cravings, food finds", className: "pillar-food" },
 ];
 
 const contentCards = [
-  { label: "Reel",  detail: "Styling transition", className: "content-one" },
-  { label: "Post",  detail: "Beauty flatlay",     className: "content-two" },
-  { label: "Reel",  detail: "Cafe diary",         className: "content-three" },
-  { label: "Story", detail: "PR unboxing",        className: "content-four" },
-  { label: "Post",  detail: "Lifestyle edit",     className: "content-five" },
+  { label: "Reel", detail: "Styling transition", className: "content-one" },
+  { label: "Post", detail: "Beauty flatlay", className: "content-two" },
+  { label: "Reel", detail: "Cafe diary", className: "content-three" },
+  { label: "Story", detail: "PR unboxing", className: "content-four" },
+  { label: "Post", detail: "Lifestyle edit", className: "content-five" },
 ];
 
 // ─────────────────────────────────────────────────────────────────
@@ -209,7 +209,7 @@ function ScrapArrowItem({ item, profile, y }) {
 
 function HeroIntro({ config, scrollContainer }) {
   const {
-    title = { label: "about Thanmayee", top: 8, left: 50, rotate: 0, size: 4.5 },
+    title = { label: "about Thanu", top: 8, left: 50, rotate: 0, size: 4.5 },
     texts,
     emojis,
     arrows,
@@ -336,7 +336,7 @@ function HeroIntro({ config, scrollContainer }) {
               viewport={{ amount: 0.3, once: true }}
               style={{ y: ySlow }}
             >
-              <img src="/TRK.jpg" alt="Thanmayee Reddy" className="cutout-main" />
+              <img src="/trk.webp" alt="Thanu" className="cutout-main" />
             </motion.div>
           </div>
 
@@ -458,12 +458,12 @@ function HowIWork({ config, scrollContainer }) {
           </motion.header>
 
           {/* ── CAMPAIGN CARDS (Central showcases) ── */}
-          
+
           {/* ── DYNAMIC CAMPAIGN CARDS ── */}
           {(config.notes || []).map((note, index) => {
             const isRed = note.type === "red";
             const isMinutiae = note.id === "note-minutiae";
-            
+
             return (
               <motion.div
                 key={note.id}
@@ -489,9 +489,9 @@ function HowIWork({ config, scrollContainer }) {
                     <div className="booklet-page cover-page">
                       <div className="binder-rings" />
                       <div className="cover-title">
-                        <h1>MINUTIAE</h1>
-                        <p className="val-sub">Valentine's Day</p>
-                        <span className="cursive-sub">Shoot Concept</span>
+                        <h1>{note.coverTitle || "MINUTIAE"}</h1>
+                        <p className="val-sub">{note.coverSubtitle || "Valentine's Day"}</p>
+                        <span className="cursive-sub">{note.coverCursive || "Shoot Concept"}</span>
                       </div>
                     </div>
                     {/* Page 2: Lined Notebook Page */}
@@ -503,13 +503,13 @@ function HowIWork({ config, scrollContainer }) {
                     <div className="booklet-page media-page">
                       <div className="phone-mockups">
                         <div className="phone-screen">
-                          <img src="/ishkaara_model.png" alt="UGC Model Review" className="showcase-img" />
+                          <img src={note.image2 || "/ishkaara_model.png"} alt="UGC Model Review" className="showcase-img" />
                         </div>
                       </div>
                       <div className="products-showcase">
                         <span className="products-label">PRODUCTS</span>
                         <div className="product-thumb">
-                          <img src="/minutiae_product.png" alt="Product Jewelry Preview" className="showcase-img" />
+                          <img src={note.image1 || "/minutiae_product.png"} alt="Product Jewelry Preview" className="showcase-img" />
                         </div>
                       </div>
                     </div>
@@ -531,10 +531,10 @@ function HowIWork({ config, scrollContainer }) {
                         <span className="products-label">PRODUCTS</span>
                         <div className="product-thumbs-column">
                           <div className="product-thumb-small">
-                            <img src="/minutiae_product.png" alt="Product Gold" className="showcase-img" />
+                            <img src={note.image1 || "/minutiae_product.png"} alt="Product Gold" className="showcase-img" />
                           </div>
                           <div className="product-thumb-small">
-                            <img src="/ishkaara_model.png" alt="Model Custom" className="showcase-img" />
+                            <img src={note.image2 || "/ishkaara_model.png"} alt="Model Custom" className="showcase-img" />
                           </div>
                         </div>
                       </div>
@@ -598,7 +598,7 @@ function HowIWork({ config, scrollContainer }) {
 function PinterestLogo() {
   return (
     <svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor">
-      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.63 11.16-.1-.95-.2-2.4.04-3.43.22-.94 1.4-5.96 1.4-5.96s-.36-.72-.36-1.78c0-1.66.96-2.9 2.18-2.9 1.03 0 1.52.77 1.52 1.7 0 1.03-.66 2.58-1 4.02-.28 1.2.6 2.17 1.78 2.17 2.14 0 3.78-2.25 3.78-5.5 0-2.88-2.07-4.9-5.03-4.9-3.43 0-5.44 2.57-5.44 5.23 0 1.04.4 2.15.9 2.75.1.12.1.22.08.33-.1.38-.3.1.38-.3-.1-.04-.12-.13-.15-.17-.46-.53-.7-1.23-.7-2.12 0-3.45 2.5-6.62 7.23-6.62 3.8 0 6.75 2.7 6.75 6.32 0 3.77-2.38 6.8-5.67 6.8-1.1 0-2.15-.58-2.5-1.25l-.68 2.6c-.25.96-.92 2.16-1.37 2.9C9.07 23.77 10.5 24 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/>
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.63 11.16-.1-.95-.2-2.4.04-3.43.22-.94 1.4-5.96 1.4-5.96s-.36-.72-.36-1.78c0-1.66.96-2.9 2.18-2.9 1.03 0 1.52.77 1.52 1.7 0 1.03-.66 2.58-1 4.02-.28 1.2.6 2.17 1.78 2.17 2.14 0 3.78-2.25 3.78-5.5 0-2.88-2.07-4.9-5.03-4.9-3.43 0-5.44 2.57-5.44 5.23 0 1.04.4 2.15.9 2.75.1.12.1.22.08.33-.1.38-.3.1.38-.3-.1-.04-.12-.13-.15-.17-.46-.53-.7-1.23-.7-2.12 0-3.45 2.5-6.62 7.23-6.62 3.8 0 6.75 2.7 6.75 6.32 0 3.77-2.38 6.8-5.67 6.8-1.1 0-2.15-.58-2.5-1.25l-.68 2.6c-.25.96-.92 2.16-1.37 2.9C9.07 23.77 10.5 24 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z" />
     </svg>
   );
 }
@@ -606,7 +606,7 @@ function PinterestLogo() {
 function InstagramLogo() {
   return (
     <svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor">
-      <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/>
+      <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
     </svg>
   );
 }
@@ -614,7 +614,7 @@ function InstagramLogo() {
 function DaVinciResolveLogo() {
   return (
     <svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor">
-      <path d="M17.621 0 5.977.004c-1.37 0-2.756.345-3.762 1.11a4.925 4.925 0 0 0-1.61 2.003C.233 3.93 0 5.02 0 5.951l.012 12.2c.002 1.604.479 3.057 1.461 4.112.984 1.056 2.462 1.683 4.331 1.691L16.856 24c1.26.005 3.095-.036 4.303-.714 1.075-.605 2.025-1.556 2.497-2.984.278-.84.345-2.084.344-3.147l-.021-11.13c-.002-.888-.15-2.023-.547-2.934-.425-.976-1.181-1.815-2.322-2.425C20.353.26 19.123 0 17.622 0zm0 .93c1.378 0 2.538.295 3.04.565.977.523 1.544 1.166 1.889 1.96.315.721.47 1.793.473 2.572l.018 11.13c.002 1.013-.097 2.257-.298 2.86-.396 1.202-1.146 1.946-2.063 2.462-.814.457-2.612.593-3.82.588l-11.05-.044c-1.657-.007-2.832-.534-3.626-1.386-.792-.851-1.212-2.06-1.212-3.485L.999 5.95c0-.829.196-1.827.474-2.437.345-.757.75-1.207 1.365-1.674C3.585 1.27 4.868.97 6.08.97zm-5.66 3.423c-1.976.089-3.204 1.658-3.214 3.29.019 1.443 1.635 3.481 2.884 4.53.12.099.154.109.33.18.062.025.198-.047.327-.135.36-.245.993-.947 1.648-1.738a7.67 7.67 0 0 0 1.031-1.683c.409-.89.261-1.599.235-1.888a3.983 3.983 0 0 0-.99-1.692 3.36 3.36 0 0 0-2.251-.864zm4.172 7.922a10.185 10.185 0 0 0-3.244.61c-.15.058-.26.1-.374.17-.057.036-.11.135-.105.292.017.433.29 1.278.624 2.27.384 1.135 1.066 2.27 1.844 2.74a3.23 3.23 0 0 0 2.53.342c.832-.243 1.595-.868 1.962-1.546.986-1.818.19-3.548-1.121-4.417-.447-.296-1.133-.445-1.89-.46-.074 0-.15-.002-.226-.001zm-8.432.038a6.201 6.201 0 0 0-.752.047c-.596.078-.932.273-1.29.51a3.177 3.177 0 0 0-1.365 1.979c-.075.552-.086 1.053.033 1.507.433 1.389 1.326 2.222 2.847 2.452.636.028 1.37-.063 1.99-.45 1.269-.782 2.08-3.17 2.412-4.742.053-.176.035-.357-.013-.42-.005-.067-.044-.113-.19-.183-.398-.192-1.32-.417-2.375-.6a7.68 7.68 0 0 0-1.297-.1z"/>
+      <path d="M17.621 0 5.977.004c-1.37 0-2.756.345-3.762 1.11a4.925 4.925 0 0 0-1.61 2.003C.233 3.93 0 5.02 0 5.951l.012 12.2c.002 1.604.479 3.057 1.461 4.112.984 1.056 2.462 1.683 4.331 1.691L16.856 24c1.26.005 3.095-.036 4.303-.714 1.075-.605 2.025-1.556 2.497-2.984.278-.84.345-2.084.344-3.147l-.021-11.13c-.002-.888-.15-2.023-.547-2.934-.425-.976-1.181-1.815-2.322-2.425C20.353.26 19.123 0 17.622 0zm0 .93c1.378 0 2.538.295 3.04.565.977.523 1.544 1.166 1.889 1.96.315.721.47 1.793.473 2.572l.018 11.13c.002 1.013-.097 2.257-.298 2.86-.396 1.202-1.146 1.946-2.063 2.462-.814.457-2.612.593-3.82.588l-11.05-.044c-1.657-.007-2.832-.534-3.626-1.386-.792-.851-1.212-2.06-1.212-3.485L.999 5.95c0-.829.196-1.827.474-2.437.345-.757.75-1.207 1.365-1.674C3.585 1.27 4.868.97 6.08.97zm-5.66 3.423c-1.976.089-3.204 1.658-3.214 3.29.019 1.443 1.635 3.481 2.884 4.53.12.099.154.109.33.18.062.025.198-.047.327-.135.36-.245.993-.947 1.648-1.738a7.67 7.67 0 0 0 1.031-1.683c.409-.89.261-1.599.235-1.888a3.983 3.983 0 0 0-.99-1.692 3.36 3.36 0 0 0-2.251-.864zm4.172 7.922a10.185 10.185 0 0 0-3.244.61c-.15.058-.26.1-.374.17-.057.036-.11.135-.105.292.017.433.29 1.278.624 2.27.384 1.135 1.066 2.27 1.844 2.74a3.23 3.23 0 0 0 2.53.342c.832-.243 1.595-.868 1.962-1.546.986-1.818.19-3.548-1.121-4.417-.447-.296-1.133-.445-1.89-.46-.074 0-.15-.002-.226-.001zm-8.432.038a6.201 6.201 0 0 0-.752.047c-.596.078-.932.273-1.29.51a3.177 3.177 0 0 0-1.365 1.979c-.075.552-.086 1.053.033 1.507.433 1.389 1.326 2.222 2.847 2.452.636.028 1.37-.063 1.99-.45 1.269-.782 2.08-3.17 2.412-4.742.053-.176.035-.357-.013-.42-.005-.067-.044-.113-.19-.183-.398-.192-1.32-.417-2.375-.6a7.68 7.68 0 0 0-1.297-.1z" />
     </svg>
   );
 }
@@ -767,14 +767,14 @@ function CreativeToolkit({ config, scrollContainer }) {
               >
                 <div className="premium-skill-card">
                   {/* Top section: colored gradient background showing skillset name */}
-                  <div 
+                  <div
                     className="skill-card-media"
                     style={{ background: getSkillGradient(index) }}
                   >
                     <div className="skill-card-arrow-badge" aria-hidden="true">↗</div>
-                    <span 
+                    <span
                       className="skill-card-name"
-                      style={{ 
+                      style={{
                         fontSize: `${skill.textSize ?? 1.2}rem`,
                         fontFamily: skill.fontFamily ?? "'Inter', sans-serif"
                       }}
@@ -782,13 +782,13 @@ function CreativeToolkit({ config, scrollContainer }) {
                       {skill.label}
                     </span>
                   </div>
-                  
+
                   {/* Bottom section: displays 5 stars for rating */}
                   <div className="skill-card-details">
                     <div className="skill-stars-container">
                       {Array.from({ length: 5 }).map((_, i) => (
-                        <span 
-                          key={i} 
+                        <span
+                          key={i}
                           className={`skill-star-icon ${i < (skill.rating ?? 5) ? "star-filled" : "star-empty"}`}
                         >
                           ★
@@ -822,9 +822,9 @@ function CreativeToolkit({ config, scrollContainer }) {
                 whileInView="visible"
                 viewport={{ amount: 0.15, once: true }}
               >
-                <div 
-                  className="tool-bubble" 
-                  style={{ 
+                <div
+                  className="tool-bubble"
+                  style={{
                     background: tool.color,
                   }}
                 >
@@ -937,11 +937,11 @@ function MyWork({ config, scrollContainer }) {
 
   return (
     <Page className="my-work-page" label="My Work">
-      <div 
-        ref={(el) => { 
-          targetRef.current = el; 
-          pageRef.current = el; 
-        }} 
+      <div
+        ref={(el) => {
+          targetRef.current = el;
+          pageRef.current = el;
+        }}
         className="about-board-wrapper"
       >
         <motion.div
@@ -972,9 +972,9 @@ function MyWork({ config, scrollContainer }) {
             <motion.h1 variants={textRise} style={{ fontSize: `${title.size}rem` }}>
               {title.label} <span className="movie-emoji">🎬</span>
             </motion.h1>
-            
+
             {/* Highlighter Underline */}
-            <div 
+            <div
               className="yellow-highlight-stroke"
               style={{
                 position: "absolute",
@@ -1015,7 +1015,7 @@ function MyWork({ config, scrollContainer }) {
                   y: yMedium,
                 }}
               >
-                <motion.div 
+                <motion.div
                   className="clipboard-card"
                   variants={cardSlideIn}
                   custom={0.15 + index * 0.15}
@@ -1064,12 +1064,12 @@ function MyWork({ config, scrollContainer }) {
                     {/* Red Paint brushstroke brand banner */}
                     <div className="brand-tag-paint">
                       <svg viewBox="0 0 200 50" className="brushstroke-svg" preserveAspectRatio="none">
-                        <path 
-                          d="M5,22 C30,10 75,6 120,12 C165,18 190,14 195,25 C190,44 150,38 100,41 C50,44 15,46 5,35 Z" 
-                          fill="#c92722" 
+                        <path
+                          d="M5,22 C30,10 75,6 120,12 C165,18 190,14 195,25 C190,44 150,38 100,41 C50,44 15,46 5,35 Z"
+                          fill="#c92722"
                         />
                       </svg>
-                      <span 
+                      <span
                         className="brand-tag-text"
                         style={{
                           fontFamily: item.fontFamily ?? "'Inter', sans-serif",
@@ -1148,9 +1148,9 @@ function Contact({ scrollContainer }) {
             <div className="notebook-card-body">
               <div className="notebook-red-margin" />
               <div className="notebook-lines-overlay" />
-              
+
               <h2 className="notebook-card-title">COLLAB CHECKLIST</h2>
-              
+
               <ul className="notebook-checklist">
                 <li className="checklist-item checked">
                   <span className="check-box-icon">✓</span>
@@ -1216,19 +1216,19 @@ function Contact({ scrollContainer }) {
           >
             <svg viewBox="0 0 100 100" className="handwritten-arrow-svg">
               {/* Dynamic loop path pointing to the stickers */}
-              <path 
-                d="M10,20 C50,10 90,40 50,60 C30,70 15,45 40,85" 
-                stroke="#c92722" 
-                strokeWidth="4" 
-                fill="none" 
-                strokeLinecap="round" 
+              <path
+                d="M10,20 C50,10 90,40 50,60 C30,70 15,45 40,85"
+                stroke="#c92722"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
               />
-              <path 
-                d="M25,75 L40,85 L42,70" 
-                stroke="#c92722" 
-                strokeWidth="4" 
-                fill="none" 
-                strokeLinecap="round" 
+              <path
+                d="M25,75 L40,85 L42,70"
+                stroke="#c92722"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
               />
             </svg>
           </motion.div>

@@ -12,7 +12,7 @@ export const scrapbookConfig = {
         "id": "procaffeinator",
         "label": "Content Creator",
         "top": 29,
-        "left": 26,
+        "left": 25,
         "rotate": -4,
         "size": 2.15,
         "width": 190
@@ -142,7 +142,7 @@ export const scrapbookConfig = {
       {
         "id": "arrow-procaffeinator",
         "top": 32,
-        "left": 32,
+        "left": 31,
         "width": 208,
         "height": 83,
         "rotate": 0,
@@ -178,14 +178,14 @@ export const scrapbookConfig = {
       {
         "id": "arrow-pinterest",
         "top": 30.5,
-        "left": 56,
-        "width": 213,
-        "height": 45,
+        "left": 58.5,
+        "width": 175,
+        "height": 69,
         "rotate": 0,
         "style": "simple",
         "direction": "down-left",
-        "path": "M 203,10 Q 106.5,4.5 12,33",
-        "arrowTip": "M 12,33 L 24,35 M 12,33 L 16,21"
+        "path": "M 165,10 Q 87.5,6.9 12,57",
+        "arrowTip": "M 12,57 L 24,59 M 12,57 L 16,45"
       },
       {
         "id": "arrow-years",
@@ -749,4 +749,4 @@ export const scrapbookConfig = {
       }
     ]
   }
-};
+};  make these changes and give commands to deploy the changes to vercel
